@@ -20,7 +20,14 @@ public class SkylineManager : MonoBehaviour {
 			objectQueue.Enqueue((Transform)Instantiate(
 				prefab, new Vector3(0f, 0f, -100f), Quaternion.identity));
 		}
-		enabled = false;
+		//enabled = false;
+
+        nextPosition = startPosition;
+        for (int i = 0; i < numberOfObjects; i++)
+        {
+            Recycle();
+        }
+        enabled = true;
 	}
 
 	void Update () {

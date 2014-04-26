@@ -7,7 +7,7 @@ public class Runner : MonoBehaviour {
     
 	private static int boosts;
 
-    Animator animator;
+
 	
 	public float acceleration;
 	public Vector3 boostVelocity, jumpVelocity, landVelocity;
@@ -19,8 +19,12 @@ public class Runner : MonoBehaviour {
 	
 	private bool touchingPlatform;
 	private Vector3 startPosition;
+    private Animator animator;
     private float speed;
     private bool goingDown;
+    private bool gameStart;
+    private bool canJump;
+    private int jCount;
 
     private float runnerSpeed;
 	
@@ -29,21 +33,32 @@ public class Runner : MonoBehaviour {
 		GameEventManager.GameOver += GameOver;
 		startPosition = transform.localPosition;
 		renderer.enabled = false;
-		rigidbody.isKinematic = true;
-		enabled = false;
-        
+		rigidbody.isKinematic = false;
+		enabled = true;
+        canJump = false;
  
         animator = GetComponent<Animator>();
         animator.speed = 2f;
-       
+  
 	}
 	
 	void Update () {
+
         if (Input.GetButtonDown("Jump") || Input.GetMouseButtonDown(0))
         {
-			if(touchingPlatform){
+  
+            jCount++;
+            if (jCount >= 2)
+            {  
+                if(!canJump)
+                        canJump = true;
+            }
+
+            if (touchingPlatform && canJump)
+            {
                 if (runnerSpeed <= 40f)
                 {
+                   // rigidbody.MovePosition(currentPos+jumpVelocity * Time.deltaTime);
                     rigidbody.AddForce(jumpVelocity, ForceMode.VelocityChange);
                     animator.SetTrigger("Jump");
                     goingDown = false;
@@ -79,22 +94,23 @@ public class Runner : MonoBehaviour {
         }
 		distanceTraveled = transform.localPosition.x;
         gamePoints = distanceTraveled;
+        if(gameStart)
         GUIManager.SetDistance(gamePoints);
         //transform.rotation = Quaternion.Euler(0, 90, 0);
 
-        
-        GUIManager.SetSpeed(runnerSpeed);
         speed = Mathf.Clamp(runnerSpeed + Time.deltaTime, -1f, 1f);
         animator.SetFloat("Speed", speed);
 		
 		if(transform.localPosition.y < gameOverY){
 			GameEventManager.TriggerGameOver();
 		}
+
 	}
 
 	void FixedUpdate () {
         if (touchingPlatform)
         {
+            
             if(runnerSpeed <= 40f)
                  rigidbody.AddForce(acceleration, 0f, 0f, ForceMode.Acceleration);
             else if (runnerSpeed <= 50f)
@@ -103,7 +119,6 @@ public class Runner : MonoBehaviour {
                 rigidbody.AddForce(acceleration/3, 0f, 0f, ForceMode.Acceleration);
             else if (runnerSpeed <= 70f)
                 rigidbody.AddForce(acceleration / 4, 0f, 0f, ForceMode.Acceleration);
-
 
             animator.speed = 2f;
         }
@@ -119,6 +134,7 @@ public class Runner : MonoBehaviour {
             animator.SetTrigger("Jump");
         }
         runnerSpeed = rigidbody.velocity.magnitude;
+
 	}
 
 
@@ -181,7 +197,7 @@ public class Runner : MonoBehaviour {
         Vector3 position = new Vector3(xpos, transform.position.y - 2, 0);
 
         //This line aims the splash towards the middle. Only use for small bodies of water:
-        Quaternion rotation = Quaternion.LookRotation(new Vector3(xpos, 1 + 8, 5) - position);
+       // Quaternion rotation = Quaternion.LookRotation(new Vector3(xpos, 1 + 8, 5) - position);
 
         //Create the splash and tell it to destroy itself.
         GameObject tempObj = Instantiate(airJump, position, Quaternion.identity) as GameObject;
@@ -201,7 +217,8 @@ public class Runner : MonoBehaviour {
     void OnCollisionStay()
     {
         touchingPlatform = true;
-       
+
+      // gameObject.rigidbody.constraints = RigidbodyConstraints.FreezePositionY;
         Splash(transform.position.x, 10);
         
     }
@@ -214,20 +231,27 @@ public class Runner : MonoBehaviour {
 
 	private void GameStart () {
         runnerSpeed = 0;
-        GUIManager.SetSpeed(runnerSpeed);
+        //GUIManager.SetSpeed(runnerSpeed);
 		distanceTraveled = 0f;
 		GUIManager.SetDistance(distanceTraveled);
 		transform.localPosition = startPosition;
 		renderer.enabled = true;
+       // rigidbody.velocity = Vector3.zero;
+       
 		rigidbody.isKinematic = false;
+        rigidbody.velocity = new Vector3(15, 0, 0);
+
 		enabled = true;
         animator.SetFloat("Speed", 0);
+        gameStart = true;
+        
 	}
 	
 	private void GameOver () {
 		renderer.enabled = false;
 		rigidbody.isKinematic = true;
 		enabled = false;
+        gameStart = false;
 	}
 	
 	public static void AddBoost(){

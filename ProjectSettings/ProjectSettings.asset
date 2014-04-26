@@ -10,8 +10,8 @@ PlayerSettings:
   targetGlesGraphics: 1
   targetResolution: 0
   accelerometerFrequency: 60
-  companyName: VisionMaker
-  productName: JetNinja
+  companyName: Visionmaker Studios
+  productName: Jet Step Ninja
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   defaultScreenWidth: 1024
@@ -73,7 +73,7 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  iPhoneBundleIdentifier: com.visionmaker.game
+  iPhoneBundleIdentifier: com.visionmakerstudios.game
   metroEnableIndependentInputSource: 0
   metroEnableLowLatencyPresentationAPI: 0
   productGUID: 07a996f3a1fa743948c9913c0cac8a72
@@ -114,6 +114,18 @@ PlayerSettings:
     m_Icons:
     - m_Icon: {fileID: 0}
       m_Size: 128
+  - m_BuildTarget: Android
+    m_Icons:
+    - m_Icon: {fileID: 2800000, guid: a00966cdf67e670418d77a900b700cb0, type: 3}
+      m_Size: 144
+    - m_Icon: {fileID: 2800000, guid: 02891f82453c0704b9141bb313dcf9c4, type: 3}
+      m_Size: 96
+    - m_Icon: {fileID: 2800000, guid: f1ee4605ff6f4ef47a37ff64649e1d19, type: 3}
+      m_Size: 72
+    - m_Icon: {fileID: 2800000, guid: 79b12f6bb4ff79a4bb781e34f0902ce0, type: 3}
+      m_Size: 48
+    - m_Icon: {fileID: 2800000, guid: 6a9f1e2a9c059fa41a8b906717f78731, type: 3}
+      m_Size: 36
   m_BuildTargetBatching:
   - m_BuildTarget: Web
     m_StaticBatching: 1

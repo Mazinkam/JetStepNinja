@@ -52,16 +52,13 @@
      <Compile Include="Assets\Managers\GUIManager.cs" />
      <Compile Include="Assets\Managers\GameEventManager.cs" />
      <Compile Include="Assets\Managers\ParticleSystemManager.cs" />
+     <Compile Include="Assets\Platform\EnemyPlatform.cs" />
      <Compile Include="Assets\Platform\PlatformManager.cs" />
      <Compile Include="Assets\Platform\PlatformTouch.cs" />
      <Compile Include="Assets\Runner\Runner.cs" />
      <Compile Include="Assets\Skyline\SkylineManager.cs" />
-     <None Include="Assets\Standard Assets\Projectors\Guidelines.txt" />
-     <None Include="Assets\Standard Assets\Projectors\Sources\Shaders\Projector Multiply.shader" />
      <None Include="Assets\CuteMolly\Parallax\ReadMe.txt" />
      <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
-     <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
-     <None Include="Assets\Standard Assets\Projectors\Sources\Shaders\Projector Light.shader" />
      <None Include="Assets\Standard Assets\Water (Basic)\Sources\Shaders\FX-Water Simple.shader" />
  <Reference Include="Assembly-UnityScript-firstpass">
  <HintPath>Library\ScriptAssemblies\Assembly-UnityScript-firstpass.dll</HintPath>

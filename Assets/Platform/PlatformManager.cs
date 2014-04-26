@@ -11,7 +11,6 @@ public class PlatformManager : MonoBehaviour {
 	public float minY, maxY;
 	public Material[] materials;
 	public PhysicMaterial[] physicMaterials;
-	public Booster booster;
 
 	private Vector3 nextPosition;
 	private Queue<Transform> objectQueue;
@@ -24,7 +23,13 @@ public class PlatformManager : MonoBehaviour {
 			objectQueue.Enqueue((Transform)Instantiate(
 				prefab, new Vector3(0f, 0f, -100f), Quaternion.identity));
 		}
-		enabled = false;
+		//enabled = false;
+
+        nextPosition = startPosition;
+        for (int i = 0; i < numberOfObjects; i++)
+        {
+            Recycle();
+        }
 	}
 
 	void Update () {
@@ -42,7 +47,6 @@ public class PlatformManager : MonoBehaviour {
 		Vector3 position = nextPosition;
 		position.x += scale.x * 0.5f;
 		position.y += scale.y * 0.5f;
-		booster.SpawnIfAvailable(position);
 
 		Transform o = objectQueue.Dequeue();
 		o.localScale = scale;
