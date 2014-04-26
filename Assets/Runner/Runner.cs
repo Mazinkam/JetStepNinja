@@ -20,6 +20,7 @@ public class Runner : MonoBehaviour {
 	private bool touchingPlatform;
 	private Vector3 startPosition;
     private float speed;
+    private bool goingDown;
 
     private float runnerSpeed;
 	
@@ -45,11 +46,13 @@ public class Runner : MonoBehaviour {
                 {
                     rigidbody.AddForce(jumpVelocity, ForceMode.VelocityChange);
                     animator.SetTrigger("Jump");
+                    goingDown = false;
                 }
                 else
                 {
                     rigidbody.AddForce(new Vector3(0,20,0), ForceMode.VelocityChange);
                     animator.SetTrigger("Jump");
+                    goingDown = false;
                 }
 				touchingPlatform = false;
 			}
@@ -58,11 +61,13 @@ public class Runner : MonoBehaviour {
                 if (runnerSpeed <= 40f)
                 {
                     rigidbody.AddForce(landVelocity, ForceMode.VelocityChange);
+                    goingDown = true;
                    
                 }
                 else
                 {
                     rigidbody.AddForce(new Vector3(0, -25, 0), ForceMode.VelocityChange);
+                    goingDown = true;
                     
                 }
                 AirSplash(transform.position.x, 10);
@@ -88,15 +93,29 @@ public class Runner : MonoBehaviour {
 	}
 
 	void FixedUpdate () {
-        if (touchingPlatform && runnerSpeed <= 40f)
+        if (touchingPlatform)
         {
-            rigidbody.AddForce(acceleration, 0f, 0f, ForceMode.Acceleration);
+            if(runnerSpeed <= 40f)
+                 rigidbody.AddForce(acceleration, 0f, 0f, ForceMode.Acceleration);
+            else if (runnerSpeed <= 50f)
+                rigidbody.AddForce(acceleration/2, 0f, 0f, ForceMode.Acceleration);
+            else if (runnerSpeed <= 60f)
+                rigidbody.AddForce(acceleration/3, 0f, 0f, ForceMode.Acceleration);
+            else if (runnerSpeed <= 70f)
+                rigidbody.AddForce(acceleration / 4, 0f, 0f, ForceMode.Acceleration);
+
+
             animator.speed = 2f;
         }
         else
         {
             gamePoints *= 1.1f;
-            animator.speed = 0.10f;
+
+            if(!goingDown)
+               animator.speed = 0.10f;
+            else
+                animator.speed = 2f;
+
             animator.SetTrigger("Jump");
         }
         runnerSpeed = rigidbody.velocity.magnitude;
@@ -182,7 +201,7 @@ public class Runner : MonoBehaviour {
     void OnCollisionStay()
     {
         touchingPlatform = true;
-        if(distanceTraveled >20)
+       
         Splash(transform.position.x, 10);
         
     }

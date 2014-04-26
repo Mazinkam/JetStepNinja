@@ -181,8 +181,8 @@ EllipsoidParticleEmitter:
   m_Emit: 1
   minSize: .300000012
   maxSize: .800000012
-  minEnergy: 30
-  maxEnergy: 40
+  minEnergy: 5
+  maxEnergy: 10
   minEmission: 50
   maxEmission: 60
   worldVelocity: {x: 0, y: 1, z: 0}
