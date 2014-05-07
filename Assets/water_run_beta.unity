@@ -440,7 +440,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400046, guid: ea4f178c7fbe44a41b85ab0bf6e8ec3d, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 49.787014
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 400046, guid: ea4f178c7fbe44a41b85ab0bf6e8ec3d, type: 2}
       propertyPath: m_LocalPosition.y
@@ -1060,8 +1060,20 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: ea4f178c7fbe44a41b85ab0bf6e8ec3d, type: 2}
       propertyPath: jumpVelocity.y
-      value: 20
+      value: 18
       objectReference: {fileID: 0}
+    - target: {fileID: 100052, guid: ea4f178c7fbe44a41b85ab0bf6e8ec3d, type: 2}
+      propertyPath: m_Name
+      value: light
+      objectReference: {fileID: 0}
+    - target: {fileID: 2000000, guid: ea4f178c7fbe44a41b85ab0bf6e8ec3d, type: 2}
+      propertyPath: field of view
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: ea4f178c7fbe44a41b85ab0bf6e8ec3d, type: 2}
+      propertyPath: curCam
+      value: 
+      objectReference: {fileID: 1489935831}
     m_RemovedComponents:
     - {fileID: 6500000, guid: ea4f178c7fbe44a41b85ab0bf6e8ec3d, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: ea4f178c7fbe44a41b85ab0bf6e8ec3d, type: 2}
@@ -1510,11 +1522,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 400000, guid: 8f033e718f73e46399b06e80ebfd26f3, type: 2}
-  numberOfObjects: 10
-  recycleOffset: 80
-  startPosition: {x: -40, y: -50, z: 50}
-  minSize: {x: 60, y: 60, z: 10}
-  maxSize: {x: 70, y: 70, z: 10}
+  numberOfObjects: 3
+  recycleOffset: 150
+  startPosition: {x: -90, y: 0, z: 50}
+  minSize: {x: 100, y: 10, z: 0}
+  maxSize: {x: 100, y: 10, z: 0}
 --- !u!1 &1280511112
 GameObject:
   m_ObjectHideFlags: 0
@@ -1555,14 +1567,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 400000, guid: 33b530bd0d930469d957c9448d6eb10b, type: 2}
   numberOfObjects: 10
-  recycleOffset: 20
-  startPosition: {x: 50, y: 10, z: 0}
-  minSize: {x: 2, y: 1.5, z: 50}
-  maxSize: {x: 4, y: 1.5, z: 50}
-  minGap: {x: 5, y: 1, z: 0}
-  maxGap: {x: 15, y: 15, z: 0}
+  recycleOffset: 50
+  startPosition: {x: 50, y: 20, z: 0}
+  minSize: {x: 2, y: .5, z: 50}
+  maxSize: {x: 4, y: .5, z: 50}
+  minGap: {x: 10, y: 0, z: 0}
+  maxGap: {x: 18, y: 12, z: 0}
   minY: 1
-  maxY: 10
+  maxY: 15
   materials:
   - {fileID: 2100000, guid: 8b5d9d0f20f2f47689e3675e58fa4226, type: 2}
   physicMaterials:
@@ -1727,7 +1739,7 @@ Transform:
   m_PrefabInternal: {fileID: 597802537}
   m_GameObject: {fileID: 1489935827}
   m_LocalRotation: {x: -.0123407152, y: -.706999123, z: -.0123407152, w: .706999123}
-  m_LocalPosition: {x: 49.787014, y: 4.26768494, z: 5.00000525}
+  m_LocalPosition: {x: 50, y: 4.26768494, z: 5.00000525}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2034442424}
@@ -1738,7 +1750,7 @@ Skybox:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1489935827}
   m_Enabled: 1
-  m_CustomSkybox: {fileID: 2100000, guid: da72161c50a20f8458fa815afbdd72df, type: 2}
+  m_CustomSkybox: {fileID: 2100000, guid: c51e69e0c9e9e654883e3a29b53bb767, type: 2}
 --- !u!1 &1681447363
 GameObject:
   m_ObjectHideFlags: 0
@@ -1778,9 +1790,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 400000, guid: 4cd07194a680a4e65bf4c4c9579152dd, type: 2}
-  numberOfObjects: 10
-  recycleOffset: 75
-  startPosition: {x: -100, y: -30, z: 100}
+  numberOfObjects: 30
+  recycleOffset: 180
+  startPosition: {x: -150, y: -30, z: 200}
   minSize: {x: 10, y: 50, z: 10}
   maxSize: {x: 30, y: 100, z: 10}
 --- !u!1 &1710414342
@@ -2032,7 +2044,7 @@ GameObject:
   - 4: {fileID: 1877206581}
   - 108: {fileID: 1877206580}
   m_Layer: 0
-  m_Name: Directional light
+  m_Name: light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2175,8 +2187,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 400000, guid: 6b436d069d11415d1100ab9b44295342, type: 2}
   numberOfObjects: 3
-  recycleOffset: 40
-  startPosition: {x: 0, y: 0, z: 0}
+  recycleOffset: 120
+  startPosition: {x: -80, y: 0, z: 0}
   minSize: {x: 100, y: 1, z: 100}
   maxSize: {x: 100, y: 1, z: 100}
   minGap: {x: 0, y: 0, z: 0}
@@ -2330,9 +2342,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c472dc2e082149e5aceee335d006bc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  curCam: {fileID: 1489935831}
   acceleration: 5
   boostVelocity: {x: 0, y: 0, z: 0}
-  jumpVelocity: {x: 3, y: 20, z: 0}
+  jumpVelocity: {x: 3, y: 18, z: 0}
   landVelocity: {x: 3, y: -30, z: 0}
   gameOverY: -10
   waterRun: {fileID: 100000, guid: 58ed1c8b1d953ca439ba5af714c3e0fd, type: 2}

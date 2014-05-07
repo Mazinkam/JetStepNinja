@@ -8,7 +8,7 @@ public class Runner : MonoBehaviour {
 	private static int boosts;
 
 
-	
+    public Camera curCam;
 	public float acceleration;
 	public Vector3 boostVelocity, jumpVelocity, landVelocity;
 	public float gameOverY;
@@ -25,6 +25,7 @@ public class Runner : MonoBehaviour {
     private bool gameStart;
     private bool canJump;
     private int jCount;
+    private float splashFix = 0;
 
     private float runnerSpeed;
 	
@@ -46,7 +47,7 @@ public class Runner : MonoBehaviour {
 
         if (Input.GetButtonDown("Jump") || Input.GetMouseButtonDown(0))
         {
-  
+
             jCount++;
             if (jCount >= 2)
             {  
@@ -73,6 +74,7 @@ public class Runner : MonoBehaviour {
 			}
 			else if (!touchingPlatform )
             {
+
                 if (runnerSpeed <= 40f)
                 {
                     rigidbody.AddForce(landVelocity, ForceMode.VelocityChange);
@@ -88,6 +90,24 @@ public class Runner : MonoBehaviour {
                 AirSplash(transform.position.x, 10);
             }
 		}
+        if (!touchingPlatform )
+        {
+            Vector3 camCurVec = curCam.transform.position;
+            float wantedZoom = camCurVec.z - 90;
+          
+            if(wantedZoom > -190)
+            camCurVec = Vector3.Lerp(camCurVec, new Vector3(camCurVec.x, camCurVec.y, wantedZoom), Time.deltaTime);
+            curCam.transform.position = camCurVec;
+        }
+        if (touchingPlatform)
+        {
+            Vector3 camCurVec = curCam.transform.position;
+            float wantedZoom = camCurVec.z + 90;
+         
+            if (wantedZoom < 39)
+                camCurVec = Vector3.Lerp(camCurVec, new Vector3(camCurVec.x, camCurVec.y, wantedZoom), Time.deltaTime);
+            curCam.transform.position = camCurVec;
+        }
         if (Input.GetKey(KeyCode.Escape))
         {
             Application.Quit();
@@ -96,7 +116,6 @@ public class Runner : MonoBehaviour {
         gamePoints = distanceTraveled;
         if(gameStart)
         GUIManager.SetDistance(gamePoints);
-        //transform.rotation = Quaternion.Euler(0, 90, 0);
 
         speed = Mathf.Clamp(runnerSpeed + Time.deltaTime, -1f, 1f);
         animator.SetFloat("Speed", speed);
@@ -219,7 +238,13 @@ public class Runner : MonoBehaviour {
         touchingPlatform = true;
 
       // gameObject.rigidbody.constraints = RigidbodyConstraints.FreezePositionY;
-        Splash(transform.position.x, 10);
+        if (splashFix > 0.1)
+        {
+            Splash(transform.position.x, 10);
+            splashFix = 0;
+        }
+        else
+            splashFix += Time.deltaTime;
         
     }
 

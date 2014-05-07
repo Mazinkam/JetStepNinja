@@ -48,6 +48,7 @@
   <ItemGroup>
      <Compile Include="Assets\Booster\Bonus.cs" />
      <Compile Include="Assets\Booster\Booster.cs" />
+     <Compile Include="Assets\Cookie\MovingShadows.cs" />
      <Compile Include="Assets\Managers\EnemyManager.cs" />
      <Compile Include="Assets\Managers\GUIManager.cs" />
      <Compile Include="Assets\Managers\GameEventManager.cs" />
@@ -59,6 +60,7 @@
      <Compile Include="Assets\Skyline\SkylineManager.cs" />
      <None Include="Assets\CuteMolly\Parallax\ReadMe.txt" />
      <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
+     <None Include="Assets\Skyline\AlphaTest-DoubleSided.shader" />
      <None Include="Assets\Standard Assets\Water (Basic)\Sources\Shaders\FX-Water Simple.shader" />
  <Reference Include="Assembly-UnityScript-firstpass">
  <HintPath>Library\ScriptAssemblies\Assembly-UnityScript-firstpass.dll</HintPath>
