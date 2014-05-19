@@ -5,6 +5,8 @@ Project("{7E5E9BC6-9FF3-3688-582D-7DADB6D40ADE}") = "JetStepNinja", "Assembly-CS
 EndProject
 Project("{7E5E9BC6-9FF3-3688-582D-7DADB6D40ADE}") = "JetStepNinja", "Assembly-CSharp.csproj", "{C3401EB4-6442-C160-C34F-231F223A67B6}"
 EndProject
+Project("{7E5E9BC6-9FF3-3688-582D-7DADB6D40ADE}") = "JetStepNinja", "Assembly-CSharp-Editor.csproj", "{6804CE70-15F1-D1A6-49C7-E2EA88C6045C}"
+EndProject
 Project("{7E5E9BC6-9FF3-3688-582D-7DADB6D40ADE}") = "JetStepNinja", "Assembly-UnityScript-firstpass.unityproj", "{B1394D85-C434-0257-DCA5-82EF0715C03A}"
 EndProject
 Global
@@ -21,6 +23,10 @@ Global
 		{C3401EB4-6442-C160-C34F-231F223A67B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C3401EB4-6442-C160-C34F-231F223A67B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C3401EB4-6442-C160-C34F-231F223A67B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6804CE70-15F1-D1A6-49C7-E2EA88C6045C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6804CE70-15F1-D1A6-49C7-E2EA88C6045C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6804CE70-15F1-D1A6-49C7-E2EA88C6045C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6804CE70-15F1-D1A6-49C7-E2EA88C6045C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B1394D85-C434-0257-DCA5-82EF0715C03A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B1394D85-C434-0257-DCA5-82EF0715C03A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B1394D85-C434-0257-DCA5-82EF0715C03A}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -29,7 +35,7 @@ Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-													GlobalSection(MonoDevelopProperties) = preSolution
+																										GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1

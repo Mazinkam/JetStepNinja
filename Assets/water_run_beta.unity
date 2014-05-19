@@ -1522,11 +1522,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 400000, guid: 8f033e718f73e46399b06e80ebfd26f3, type: 2}
-  numberOfObjects: 3
-  recycleOffset: 150
+  numberOfObjects: 20
+  recycleOffset: 80
   startPosition: {x: -90, y: 0, z: 50}
-  minSize: {x: 100, y: 10, z: 0}
-  maxSize: {x: 100, y: 10, z: 0}
+  minSize: {x: 20, y: 10, z: 0}
+  maxSize: {x: 20, y: 10, z: 0}
 --- !u!1 &1280511112
 GameObject:
   m_ObjectHideFlags: 0
@@ -1569,8 +1569,8 @@ MonoBehaviour:
   numberOfObjects: 10
   recycleOffset: 50
   startPosition: {x: 50, y: 20, z: 0}
-  minSize: {x: 2, y: .5, z: 50}
-  maxSize: {x: 4, y: .5, z: 50}
+  minSize: {x: 2, y: 1, z: 50}
+  maxSize: {x: 4, y: 1, z: 50}
   minGap: {x: 10, y: 0, z: 0}
   maxGap: {x: 18, y: 12, z: 0}
   minY: 1
@@ -1750,7 +1750,7 @@ Skybox:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1489935827}
   m_Enabled: 1
-  m_CustomSkybox: {fileID: 2100000, guid: c51e69e0c9e9e654883e3a29b53bb767, type: 2}
+  m_CustomSkybox: {fileID: 2100000, guid: da72161c50a20f8458fa815afbdd72df, type: 2}
 --- !u!1 &1681447363
 GameObject:
   m_ObjectHideFlags: 0
@@ -2195,10 +2195,6 @@ MonoBehaviour:
   maxGap: {x: 0, y: 0, z: 0}
   minY: 0
   maxY: 0
-  materials:
-  - {fileID: 2100000, guid: c55afdc4a8a3b4890b07cc7d176510bb, type: 2}
-  physicMaterials:
-  - {fileID: 13400000, guid: 5410a64fad11e8d6d00011d98d76c639, type: 2}
 --- !u!1 &1943228168
 GameObject:
   m_ObjectHideFlags: 0
