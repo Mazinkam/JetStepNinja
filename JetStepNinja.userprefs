@@ -1,14 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Standard Assets\Water (Basic)\Sources\Scripts\WaterSimple.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Managers/HSController.cs">
     <Files>
-      <File FileName="..\..\..\..\..\development\Unity3D\Samples\0423_05_codes\MixamoProject\Assets\Scripts\BasicController05.cs" Line="1" Column="1" />
-      <File FileName="..\..\..\..\..\development\Unity3D\Samples\0423_05_codes\MixamoProject\Assets\Scripts\BasicController03.cs" Line="1" Column="1" />
-      <File FileName="..\..\..\..\..\development\Unity3D\Samples\0423_05_codes\MixamoProject\Assets\Scripts\BasicController04.cs" Line="1" Column="1" />
-      <File FileName="..\..\..\..\..\development\Unity3D\Samples\0423_05_codes\MixamoProject\Assets\Scripts\ThrowObjectFinal.cs" Line="1" Column="1" />
-      <File FileName="..\..\..\..\..\development\Unity3D\Samples\0423_05_codes\MixamoProject\Assets\Scripts\MouseAimFinal.cs" Line="1" Column="1" />
-      <File FileName="..\..\..\..\..\development\Unity3D\Samples\0423_05_codes\MixamoProject\Assets\Scripts\AddPropFinal.cs" Line="14" Column="34" />
-      <File FileName="Assets\Standard Assets\Water (Basic)\Sources\Scripts\WaterSimple.cs" Line="1" Column="1" />
+      <File FileName="Assets/Managers/HSController.cs" Line="9" Column="27" />
+      <File FileName="Assets/Managers/GUIManager.cs" Line="20" Column="1" />
+      <File FileName="Assets/Managers/GameEventManager.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
