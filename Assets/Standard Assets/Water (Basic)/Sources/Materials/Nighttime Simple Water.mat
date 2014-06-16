@@ -17,14 +17,56 @@ Material:
         first:
           name: _MainTex
         second:
-          m_Texture: {fileID: 2800000, guid: c2ef94ff9d11915d1100a04b44295342, type: 3}
+          m_Texture: {fileID: 2800000, guid: e6f8288974c664a309d6c66de636978c, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
         first:
           name: _BumpMap
         second:
-          m_Texture: {fileID: 2800000, guid: a53cf5449d11a15d1100a04b44295342, type: 3}
+          m_Texture: {fileID: 2800000, guid: 2dd3788f8589b40bf82a92d76ffc5091, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _ReflectiveColorCube
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Fresnel
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _ReflectiveColor
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _ReflectionTex
+        second:
+          m_Texture: {fileID: 8400000, guid: 21bb33409d118354d000dcabe39e7c39, type: 2}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _RefractionTex
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _ShoreTex
+        second:
+          m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
@@ -39,13 +81,6 @@ Material:
           name: _ColorControl
         second:
           m_Texture: {fileID: 2800000, guid: 8403d3349d112ba4d000be1be39e7c39, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _ReflectionTex
-        second:
-          m_Texture: {fileID: 8400000, guid: 21bb33409d118354d000dcabe39e7c39, type: 2}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
@@ -76,12 +111,28 @@ Material:
         second: 1
       data:
         first:
-          name: _Highlight
-        second: 33.2075462
+          name: _WaveScale
+        second: .0447473004
       data:
         first:
-          name: _WaveScale
-        second: .0702830181
+          name: _ReflDistort
+        second: .439999998
+      data:
+        first:
+          name: _RefrDistort
+        second: .400000006
+      data:
+        first:
+          name: _FresnelScale
+        second: .75
+      data:
+        first:
+          name: _GerstnerIntensity
+        second: 1
+      data:
+        first:
+          name: _Highlight
+        second: 33.2075462
       data:
         first:
           name: _bScale
@@ -121,12 +172,92 @@ Material:
         second: {r: 0, g: 0, b: 0, a: .400000006}
       data:
         first:
+          name: _RefrColor
+        second: {r: .340000004, g: .850000024, b: .920000017, a: 1}
+      data:
+        first:
           name: _BumpMap_ST
         second: {r: 1, g: 1, b: 0, a: 0}
       data:
         first:
+          name: WaveSpeed
+        second: {r: 9.68770027, g: 4.81898165, b: -7.91322803, a: 2.87029743}
+      data:
+        first:
+          name: _HorizonColor
+        second: {r: .172000006, g: .463, b: .435000002, a: 1}
+      data:
+        first:
+          name: _DistortParams
+        second: {r: 1, g: 1, b: 2, a: 1.14999998}
+      data:
+        first:
+          name: _InvFadeParemeter
+        second: {r: .150000006, g: .150000006, b: .5, a: 1}
+      data:
+        first:
+          name: _AnimationTiling
+        second: {r: 2.20000005, g: 2.20000005, b: -1.10000002, a: -1.10000002}
+      data:
+        first:
+          name: _AnimationDirection
+        second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _BumpTiling
+        second: {r: 1, g: 1, b: -2, a: 3}
+      data:
+        first:
+          name: _BumpDirection
+        second: {r: 1, g: 1, b: -1, a: 1}
+      data:
+        first:
+          name: _BaseColor
+        second: {r: .540000021, g: .949999988, b: .99000001, a: .5}
+      data:
+        first:
+          name: _ReflectionColor
+        second: {r: .540000021, g: .949999988, b: .99000001, a: .5}
+      data:
+        first:
+          name: _SpecularColor
+        second: {r: .720000029, g: .720000029, b: .720000029, a: 1}
+      data:
+        first:
+          name: _WorldLightDir
+        second: {r: 0, g: .100000001, b: -.5, a: 0}
+      data:
+        first:
+          name: _Foam
+        second: {r: .100000001, g: .375, b: 0, a: 0}
+      data:
+        first:
+          name: _GAmplitude
+        second: {r: .300000012, g: .349999994, b: .25, a: .25}
+      data:
+        first:
+          name: _GFrequency
+        second: {r: 1.29999995, g: 1.35000002, b: 1.25, a: 1.25}
+      data:
+        first:
+          name: _GSteepness
+        second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _GSpeed
+        second: {r: 1.20000005, g: 1.375, b: 1.10000002, a: 1.5}
+      data:
+        first:
+          name: _GDirectionAB
+        second: {r: .300000012, g: .850000024, b: .850000024, a: .25}
+      data:
+        first:
+          name: _GDirectionCD
+        second: {r: .100000001, g: .899999976, b: .5, a: .5}
+      data:
+        first:
           name: _horizonColor
-        second: {r: .148485541, g: .282429248, b: .379949659, a: 0}
+        second: {r: .270938754, g: .279411793, b: .232158333, a: 0}
       data:
         first:
           name: _ColorControl_ST
@@ -135,10 +266,6 @@ Material:
         first:
           name: _ColorControlCube_ST
         second: {r: 1, g: 1, b: 0, a: 0}
-      data:
-        first:
-          name: WaveSpeed
-        second: {r: 9.68770027, g: 4.81898165, b: -7.91322803, a: 2.87029743}
       data:
         first:
           name: BumpParm
