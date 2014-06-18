@@ -12,6 +12,8 @@ public class RunnerMainMenu : MonoBehaviour
 
     private float runnerSpeed;
 
+	public static bool jump = false;
+
     void Start()
     {
         GameEventManager.GameStart += GameStart;
@@ -21,7 +23,7 @@ public class RunnerMainMenu : MonoBehaviour
         enabled = true;
         animator = GetComponent<Animator>();
         animator.speed = 2f;
-
+		jump = false;
     }
 
     void Update()
@@ -29,23 +31,38 @@ public class RunnerMainMenu : MonoBehaviour
 
         speed = Mathf.Clamp(1 + Time.deltaTime, -1f, 1f);
         animator.SetFloat("Speed", speed);
-
     }
+
+	void OnControllerColliderHit(Collision collision)
+	{
+		if (collision.gameObject.tag == "Trigger")
+		{
+			Debug.Log("HIT!!!");
+		}
+	}
 
     void FixedUpdate()
     {
+		if (jump) {
+			animator.SetTrigger("Jump");
+			animator.speed = 0.1f;
+			Vector3 pos = transform.position;
+			Vector3 force = new Vector3(0,18,-8);
+			pos += force * Time.deltaTime;
 
-      animator.speed = 2f;
+			transform.position = pos;
 
-      if (splashFix > 0.1)
-      {
-          Splash(transform.position.x, 10);
-          splashFix = 0;
-      }
-      else
-          splashFix += Time.deltaTime;
+		} else {
+			animator.speed = 2f;
 
-
+			if (splashFix > 0.1)
+			{
+				Splash (transform.position.x, 10);
+				splashFix = 0;
+			}
+			else
+				splashFix += Time.deltaTime;
+		}
     }
 
 
@@ -70,10 +87,6 @@ public class RunnerMainMenu : MonoBehaviour
         Destroy(tempObj, lifetime / 2);
 
     }
-
-
-
-
 
     private void GameStart()
     {

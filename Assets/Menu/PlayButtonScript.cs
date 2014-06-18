@@ -5,6 +5,11 @@ public class PlayButtonScript : MonoBehaviour {
 
     public Texture texture;
 
+	void OnMouseDown()
+	{
+		Application.LoadLevel ("water_run_beta");
+	}
+
 	// Use this for initialization
 	void Start () {
 
