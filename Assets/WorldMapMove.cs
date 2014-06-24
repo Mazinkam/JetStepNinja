@@ -7,14 +7,14 @@ public class WorldMapMove : MonoBehaviour {
 	private Vector3 lastRayPoint;
 	private Vector3 planeBotLeft;
 	private Vector3 planeTopRight;
-
+	Vector3 posBotLeft, posTopRight;
 	void Start()
 	{
 		planeBotLeft = transform.position;
 		planeTopRight = transform.position;
 
-		Vector3 posBotLeft = Camera.main.ScreenToWorldPoint(new Vector3(0, 0, 0));
-		Vector3 posTopRight = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, 0));
+		posBotLeft = Camera.main.ScreenToWorldPoint(new Vector3(0, 0, 0));
+		posTopRight = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, 0));
 		
 		Vector3 botLeftChild = transform.FindChild("BotLeft").transform.position;
 		Vector3 topRightChild = transform.FindChild("TopRight").transform.position;
@@ -44,39 +44,54 @@ public class WorldMapMove : MonoBehaviour {
 		Vector3 delta = rayPoint - lastRayPoint;
 		// calc new position
 
-
-		Vector3 posBotLeft = Camera.main.ScreenToWorldPoint(new Vector3(0, 0, 0));
-		Vector3 posTopRight = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, 0));
-		
 		Vector3 botLeftChild = transform.FindChild("BotLeft").transform.position;
 		Vector3 topRightChild = transform.FindChild("TopRight").transform.position;
 
 		lastRayPoint = rayPoint;
 
-		if(posBotLeft.x > botLeftChild.x)
-		{
-			//currentPosition.x = planeBotLeft.x;
+		if(botLeftChild.x + delta.x < posBotLeft.x && delta.x > 0)
+			currentPosition.x += delta.x;
+		else if(topRightChild.x + delta.x > posTopRight.x && delta.x < 0)
 			currentPosition.x += delta.x;
 
+		if (botLeftChild.z + delta.z < posBotLeft.z && delta.z > 0)
+			currentPosition.z += delta.z;
+		else if (topRightChild.z + delta.z > posTopRight.z && delta.z < 0)
+			currentPosition.z += delta.z;
+//		if (delta.y != 0)
+//		{
+//			if(currentPosition.z + delta.z < posBotLeft.z)
+//				currentPosition.z += delta.z;
+//			else if(currentPosition.z - delta.z > posBotLeft.z)
+//				currentPosition.z += delta.z;
+//		}
+
+		//currentPosition += delta;
+		/*
+		if(posBotLeft.x < botLeftChild.x)
+		{
+			currentPosition.x += posBotLeft.x - botLeftChild.x;
+		//	currentPosition.x += delta.x;
 		}
 
-		if(posBotLeft.z > botLeftChild.z)
+		if(posBotLeft.z < botLeftChild.z)
 		{
-		//	currentPosition.z = planeBotLeft.z ;
+			currentPosition.z += posBotLeft.z - botLeftChild.z ;
 		//	currentPosition.z += delta.z;
 		}
-		
-		if(posTopRight.x < topRightChild.x   )
+
+		if(posTopRight.x > topRightChild.x   )
 		{
-		//	currentPosition.x = planeTopRight.x ;
-			currentPosition.x += delta.x;
+			currentPosition.x += posTopRight.x - topRightChild.x ;
+		//	currentPosition.x += delta.x;
 		}
 		
-		if(posTopRight.z < topRightChild.z   )
+		if(posTopRight.z > topRightChild.z   )
 		{
-		//	currentPosition.z = planeTopRight.z ;
+			currentPosition.z += posTopRight.z - topRightChild.z ;
 		//	currentPosition.z += delta.z;
-		}
+		}*/
+
 
 		transform.position = currentPosition;
 	}
