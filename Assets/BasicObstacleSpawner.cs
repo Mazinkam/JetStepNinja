@@ -6,6 +6,10 @@ public class BasicObstacleSpawner : MonoBehaviour {
 	public GameObject[] obj;
 	public float spawnMin = 1f;
 	public float spawnMax = 2f;
+
+	public int basicObstiacleLimit;
+	private static int obstacleCount = 0;
+
 	
 	// Use this for initialization
 	void Start () {
@@ -14,7 +18,11 @@ public class BasicObstacleSpawner : MonoBehaviour {
 	
 	void Spawn()
 	{
-		Instantiate(obj[Random.Range(0, obj.Length)], transform.position, Quaternion.identity);
-		Invoke("Spawn", Random.Range(spawnMin, spawnMax));
+		if(obstacleCount <= basicObstiacleLimit)
+		{
+			obstacleCount++;
+			Instantiate(obj[Random.Range(0, obj.Length)], transform.position, Quaternion.identity);
+			Invoke("Spawn", Random.Range(spawnMin, spawnMax));
+		}
 	}
 }

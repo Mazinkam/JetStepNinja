@@ -1,6 +1,6 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\BasicObstacleMovement.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Store\StoreGuiScript.cs">
     <Files>
       <File FileName="Assets\WorldMapMove.cs" Line="1" Column="1" />
       <File FileName="Assets\CameraZoom.cs" Line="1" Column="1" />
@@ -8,8 +8,11 @@
       <File FileName="Assets\Runner\Runner.cs" Line="1" Column="1" />
       <File FileName="Assets\Managers\GameEventManager.cs" Line="1" Column="1" />
       <File FileName="Assets\BasicObstacleSpawner.cs" Line="1" Column="1" />
-      <File FileName="Assets\BasicObstacleMovement.cs" Line="7" Column="2" />
-      <File FileName="Assets\UpNdown.cs" Line="1" Column="1" />
+      <File FileName="Assets\BasicObstacleMovement.cs" Line="1" Column="1" />
+      <File FileName="Assets\TrainingButton.cs" Line="1" Column="1" />
+      <File FileName="Assets\Menu\MenuGui.cs" Line="1" Column="1" />
+      <File FileName="Assets\Menu\PlayButtonScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\Store\StoreGuiScript.cs" Line="43" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -83,8 +83,8 @@ public class Runner : MonoBehaviour {
         }
 
 
-        if(gameStart)
-        	GUIManager.SetDistance(gamePoints);
+    //    if(gameStart)
+     //   	GUIManager.SetDistance(gamePoints);
 
         speed = Mathf.Clamp(2 + Time.deltaTime, -1f, 1f);
         animator.SetFloat("Speed", speed);
@@ -107,7 +107,7 @@ public class Runner : MonoBehaviour {
             else
                 animator.speed = 2f;
 
-            animator.SetTrigger("Jump");
+        //    animator.SetTrigger("Jump");
         }
 
 	}

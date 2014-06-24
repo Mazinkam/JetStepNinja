@@ -51,6 +51,7 @@
      <Compile Include="Assets\CameraControlAspect.cs" />
      <Compile Include="Assets\CameraZoom.cs" />
      <Compile Include="Assets\Cookie\MovingShadows.cs" />
+     <Compile Include="Assets\GameMapGUI.cs" />
      <Compile Include="Assets\Leaderboard\LeaderboardGuiScript.cs" />
      <Compile Include="Assets\Managers\EnemyManager.cs" />
      <Compile Include="Assets\Managers\GUIManager.cs" />
