@@ -10,7 +10,7 @@ public class Runner : MonoBehaviour {
 
     public Camera curCam;
 	public float acceleration;
-	public Vector3 boostVelocity, jumpVelocity, landVelocity;
+	public Vector3 jumpVelocity, landVelocity;
 	public float gameOverY;
 
     public GameObject waterRun;
@@ -23,8 +23,7 @@ public class Runner : MonoBehaviour {
     private float speed;
     private bool goingDown;
     private bool gameStart;
-    private bool canJump;
-    private int jCount;
+
     private float splashFix = 0;
 
     private float runnerSpeed;
@@ -36,7 +35,6 @@ public class Runner : MonoBehaviour {
 		renderer.enabled = false;
 		rigidbody.isKinematic = false;
 		enabled = true;
-        canJump = false;
  
         animator = GetComponent<Animator>();
         animator.speed = 2f;
@@ -47,46 +45,17 @@ public class Runner : MonoBehaviour {
 
         if (Input.GetButtonDown("Jump") || Input.GetMouseButtonDown(0))
         {
-
-            jCount++;
-            if (jCount >= 2)
-            {  
-                if(!canJump)
-                        canJump = true;
-            }
-
-            if (touchingPlatform && canJump)
+            if (touchingPlatform)
             {
-                if (runnerSpeed <= 40f)
-                {
-                   // rigidbody.MovePosition(currentPos+jumpVelocity * Time.deltaTime);
-                    rigidbody.AddForce(jumpVelocity, ForceMode.VelocityChange);
-                    animator.SetTrigger("Jump");
-                    goingDown = false;
-                }
-                else
-                {
-                    rigidbody.AddForce(new Vector3(0,20,0), ForceMode.VelocityChange);
-                    animator.SetTrigger("Jump");
-                    goingDown = false;
-                }
-				touchingPlatform = false;
+	            rigidbody.AddForce(jumpVelocity, ForceMode.VelocityChange);
+	            animator.SetTrigger("Jump");
+	            goingDown = false;
+                touchingPlatform = false;
 			}
 			else if (!touchingPlatform )
             {
-
-                if (runnerSpeed <= 40f)
-                {
-                    rigidbody.AddForce(landVelocity, ForceMode.VelocityChange);
-                    goingDown = true;
-                   
-                }
-                else
-                {
-                    rigidbody.AddForce(new Vector3(0, -25, 0), ForceMode.VelocityChange);
-                    goingDown = true;
-                    
-                }
+	            rigidbody.AddForce(landVelocity, ForceMode.VelocityChange);
+	            goingDown = true;
                 AirSplash(transform.position.x, 10);
             }
 		}
@@ -112,12 +81,12 @@ public class Runner : MonoBehaviour {
         {
             Application.Quit();
         }
-		distanceTraveled = transform.localPosition.x;
-        gamePoints = distanceTraveled;
-        if(gameStart)
-        GUIManager.SetDistance(gamePoints);
 
-        speed = Mathf.Clamp(runnerSpeed + Time.deltaTime, -1f, 1f);
+
+        if(gameStart)
+        	GUIManager.SetDistance(gamePoints);
+
+        speed = Mathf.Clamp(2 + Time.deltaTime, -1f, 1f);
         animator.SetFloat("Speed", speed);
 		
 		if(transform.localPosition.y < gameOverY){
@@ -129,22 +98,10 @@ public class Runner : MonoBehaviour {
 	void FixedUpdate () {
         if (touchingPlatform)
         {
-            
-            if(runnerSpeed <= 40f)
-                 rigidbody.AddForce(acceleration, 0f, 0f, ForceMode.Acceleration);
-            else if (runnerSpeed <= 50f)
-                rigidbody.AddForce(acceleration/2, 0f, 0f, ForceMode.Acceleration);
-            else if (runnerSpeed <= 60f)
-                rigidbody.AddForce(acceleration/3, 0f, 0f, ForceMode.Acceleration);
-            else if (runnerSpeed <= 70f)
-                rigidbody.AddForce(acceleration / 4, 0f, 0f, ForceMode.Acceleration);
-
             animator.speed = 2f;
         }
         else
         {
-            gamePoints *= 1.1f;
-
             if(!goingDown)
                animator.speed = 0.10f;
             else
@@ -152,7 +109,6 @@ public class Runner : MonoBehaviour {
 
             animator.SetTrigger("Jump");
         }
-        runnerSpeed = rigidbody.velocity.magnitude;
 
 	}
 
@@ -238,7 +194,7 @@ public class Runner : MonoBehaviour {
         touchingPlatform = true;
 
       // gameObject.rigidbody.constraints = RigidbodyConstraints.FreezePositionY;
-        if (splashFix > 0.1)
+        if (splashFix > 0.2)
         {
             Splash(transform.position.x, 10);
             splashFix = 0;
@@ -264,7 +220,7 @@ public class Runner : MonoBehaviour {
        // rigidbody.velocity = Vector3.zero;
        
 		rigidbody.isKinematic = false;
-        rigidbody.velocity = new Vector3(15, 0, 0);
+       // rigidbody.velocity = new Vector3(15, 0, 0);
 
 		enabled = true;
         animator.SetFloat("Speed", 0);
@@ -277,10 +233,5 @@ public class Runner : MonoBehaviour {
 		rigidbody.isKinematic = true;
 		enabled = false;
         gameStart = false;
-	}
-	
-	public static void AddBoost(){
-		boosts += 1;
-        gamePoints += boosts * 100;
 	}
 }

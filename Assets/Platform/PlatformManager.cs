@@ -31,8 +31,11 @@ public class PlatformManager : MonoBehaviour {
 	}
 
 	void Update () {
-		if(objectQueue.Peek().localPosition.x + recycleOffset < Runner.distanceTraveled){
+		if(objectQueue.Peek().localPosition.x + recycleOffset < -200){
 			Recycle();
+		}
+		else{
+			objectQueue.Peek().localPosition += new Vector3(-10,0,0) * Time.deltaTime;
 		}
 	}
 
