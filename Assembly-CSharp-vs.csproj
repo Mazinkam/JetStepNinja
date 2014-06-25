@@ -52,6 +52,7 @@
      <Compile Include="Assets\CameraZoom.cs" />
      <Compile Include="Assets\Cookie\MovingShadows.cs" />
      <Compile Include="Assets\DestroyerScript.cs" />
+     <Compile Include="Assets\FloorTileSpawner.cs" />
      <Compile Include="Assets\GameMapGUI.cs" />
      <Compile Include="Assets\Leaderboard\LeaderboardGuiScript.cs" />
      <Compile Include="Assets\Managers\EnemyManager.cs" />
