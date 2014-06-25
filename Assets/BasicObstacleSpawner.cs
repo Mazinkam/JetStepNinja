@@ -8,7 +8,7 @@ public class BasicObstacleSpawner : MonoBehaviour {
 	public float spawnMax = 2f;
 
 	public int basicObstiacleLimit;
-	private static int obstacleCount = 0;
+	public static int obstacleCount = 0;
 
 	
 	// Use this for initialization
