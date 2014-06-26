@@ -21,8 +21,7 @@ public class Runner : MonoBehaviour
 	private bool gameStart;
 	private float splashFix = 0;
 	private float runnerSpeed;
-	public bool rotateMe;
-	private Vector3 currentRotation, goToRotation;
+	private bool rotateMe;
     
 	void Start()
 	{
@@ -35,26 +34,25 @@ public class Runner : MonoBehaviour
  
 		animator = GetComponent<Animator>();
 		animator.speed = 2f;
-		currentRotation = new Vector3(0, 90, 0);
 	}
     
 	void Update()
 	{
-		if (rotateMe)
-			transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(currentRotation), 10f);
+		if(rotateMe)
+		{
+			if(transform.rotation.eulerAngles.z < 90)
+				transform.localRotation = Quaternion.Euler(new Vector3(0,90,180));
+			else
+				transform.localRotation = Quaternion.Euler(new Vector3(0,90,0));
+			
+			Physics.gravity *= -1;
+			jumpVelocity *= -1;
+			landVelocity *= -1;
+			rotateMe = false;
+		}
 
 		if (Input.GetButtonDown("Jump") || Input.GetMouseButtonDown(0))
 		{
-			if (rotateMe)
-			{
-				if (currentRotation == new Vector3(0, 90, 0))
-					currentRotation = new Vector3(180, 270, 0);
-				else
-					currentRotation = new Vector3(0, 90, 0);
-
-				Physics.gravity *= -1;
-			}
-
 			if (touchingPlatform)
 			{
 				rigidbody.AddForce(jumpVelocity, ForceMode.VelocityChange);
@@ -245,5 +243,11 @@ public class Runner : MonoBehaviour
 		rigidbody.isKinematic = true;
 		enabled = false;
 		gameStart = false;
+	}
+
+	public void startRotateMe()
+	{
+		rotateMe = true;
+		Debug.Log("Start Rotate Me!");
 	}
 }
