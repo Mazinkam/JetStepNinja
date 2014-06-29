@@ -71,6 +71,7 @@
      <Compile Include="Assets\Platform\PlatformManager.cs" />
      <Compile Include="Assets\Platform\PlatformTouch.cs" />
      <Compile Include="Assets\PlayButtonScript2.cs" />
+     <Compile Include="Assets\Runner\RotateTrigger.cs" />
      <Compile Include="Assets\Runner\Runner.cs" />
      <Compile Include="Assets\RunnerMainMenu.cs" />
      <Compile Include="Assets\Skyline\SkylineManager.cs" />

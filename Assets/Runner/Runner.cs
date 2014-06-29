@@ -34,17 +34,21 @@ public class Runner : MonoBehaviour
  
 		animator = GetComponent<Animator>();
 		animator.speed = 2f;
+
 	}
     
 	void Update()
 	{
 		if(rotateMe)
 		{
-			if(transform.rotation.eulerAngles.z < 90)
+		/*	if(transform.rotation.eulerAngles.z < 90)
 				transform.localRotation = Quaternion.Euler(new Vector3(0,90,180));
 			else
-				transform.localRotation = Quaternion.Euler(new Vector3(0,90,0));
-			
+				transform.localRotation = Quaternion.Euler(new Vector3(0,90,0));*/
+
+
+
+
 			Physics.gravity *= -1;
 			jumpVelocity *= -1;
 			landVelocity *= -1;
@@ -64,6 +68,7 @@ public class Runner : MonoBehaviour
 			{
 				rigidbody.AddForce(landVelocity, ForceMode.VelocityChange);
 				goingDown = true;
+				animator.SetBool("UpsideRun",true);
 				AirSplash(transform.position.x, 10);
 			}
 		}
@@ -247,7 +252,7 @@ public class Runner : MonoBehaviour
 
 	public void startRotateMe()
 	{
-		rotateMe = true;
+
 		Debug.Log("Start Rotate Me!");
 	}
 }
