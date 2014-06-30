@@ -22,6 +22,7 @@ public class Runner : MonoBehaviour
 	private float splashFix = 0;
 	private float runnerSpeed;
 	private bool rotateMe;
+	private bool canRotate = false;
     
 	void Start()
 	{
@@ -35,26 +36,12 @@ public class Runner : MonoBehaviour
 		animator = GetComponent<Animator>();
 		animator.speed = 2f;
 
+		if(GameObject.FindGameObjectWithTag("GameMode2") != null)
+			canRotate = true;
 	}
     
 	void Update()
 	{
-		if(rotateMe)
-		{
-		/*	if(transform.rotation.eulerAngles.z < 90)
-				transform.localRotation = Quaternion.Euler(new Vector3(0,90,180));
-			else
-				transform.localRotation = Quaternion.Euler(new Vector3(0,90,0));*/
-
-
-
-
-			Physics.gravity *= -1;
-			jumpVelocity *= -1;
-			landVelocity *= -1;
-			rotateMe = false;
-		}
-
 		if (Input.GetButtonDown("Jump") || Input.GetMouseButtonDown(0))
 		{
 			if (touchingPlatform)
@@ -66,9 +53,25 @@ public class Runner : MonoBehaviour
 			}
 			else if (!touchingPlatform)
 			{
+				if(canRotate)
+				{
+					if(Physics.gravity.y < 0f)
+					{
+						animator.SetBool("UpsideRun",true);
+						Physics.gravity *= -1;
+						jumpVelocity *= -1;
+						landVelocity *= -1;
+					}
+					else
+					{
+						animator.SetBool("UpsideRun",false);
+						Physics.gravity *= -1;
+						jumpVelocity *= -1;
+						landVelocity *= -1;
+					}
+				}
 				rigidbody.AddForce(landVelocity, ForceMode.VelocityChange);
 				goingDown = true;
-				animator.SetBool("UpsideRun",true);
 				AirSplash(transform.position.x, 10);
 			}
 		}
@@ -79,6 +82,7 @@ public class Runner : MonoBehaviour
           
 			if (wantedZoom > -190)
 				camCurVec = Vector3.Lerp(camCurVec, new Vector3(camCurVec.x, camCurVec.y, wantedZoom), Time.deltaTime);
+
 			curCam.transform.position = camCurVec;
 		}
 		if (touchingPlatform)
@@ -88,6 +92,7 @@ public class Runner : MonoBehaviour
          
 			if (wantedZoom < 39)
 				camCurVec = Vector3.Lerp(camCurVec, new Vector3(camCurVec.x, camCurVec.y, wantedZoom), Time.deltaTime);
+
 			curCam.transform.position = camCurVec;
 		}
 		if (Input.GetKey(KeyCode.Escape))
@@ -248,11 +253,5 @@ public class Runner : MonoBehaviour
 		rigidbody.isKinematic = true;
 		enabled = false;
 		gameStart = false;
-	}
-
-	public void startRotateMe()
-	{
-
-		Debug.Log("Start Rotate Me!");
 	}
 }
