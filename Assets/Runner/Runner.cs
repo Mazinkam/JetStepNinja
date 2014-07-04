@@ -13,6 +13,7 @@ public class Runner : MonoBehaviour
 	public GameObject waterRun;
 	public GameObject waterJump;
 	public GameObject airJump;
+	public GameObject airJumpUpside;
 	private bool touchingPlatform;
 	private Vector3 startPosition;
 	private Animator animator;
@@ -22,7 +23,9 @@ public class Runner : MonoBehaviour
 	private float splashFix = 0;
 	private float runnerSpeed;
 	private bool rotateMe;
-	private bool canRotate = false;
+	private bool canRotate = true;
+	private bool gameMode2 = false;
+	private Transform floor, roof;
     
 	void Start()
 	{
@@ -36,12 +39,30 @@ public class Runner : MonoBehaviour
 		animator = GetComponent<Animator>();
 		animator.speed = 2f;
 
+		floor = GameObject.Find("FloorTileBottom").transform;
+
 		if(GameObject.FindGameObjectWithTag("GameMode2") != null)
-			canRotate = true;
+		{
+			gameMode2 = true;
+			roof = GameObject.Find("FloorTileTop").transform;
+		}
 	}
     
 	void Update()
 	{
+		// Check if player outside
+		if(gameMode2)
+		{
+			if(roof.position.y < transform.position.y)
+			{
+				transform.position = new Vector3(transform.position.x, roof.position.y + 0.2f, transform.position.z);
+			}
+			else if(floor.position.y > transform.position.y)
+			{
+				transform.position = new Vector3(transform.position.x, floor.position.y - 0.2f, transform.position.z);
+			}
+		}
+
 		if (Input.GetButtonDown("Jump") || Input.GetMouseButtonDown(0))
 		{
 			if (touchingPlatform)
@@ -53,7 +74,8 @@ public class Runner : MonoBehaviour
 			}
 			else if (!touchingPlatform)
 			{
-				if(canRotate)
+				// rotate player if game mode 2
+				if(gameMode2 && canRotate)
 				{
 					if(Physics.gravity.y < 0f)
 					{
@@ -69,12 +91,18 @@ public class Runner : MonoBehaviour
 						jumpVelocity *= -1;
 						landVelocity *= -1;
 					}
+					canRotate = false;
 				}
 				rigidbody.AddForce(landVelocity, ForceMode.VelocityChange);
 				goingDown = true;
-				AirSplash(transform.position.x, 10);
+
+				if(gameMode2 && Physics.gravity.y < 0f)
+					AirSplash(transform.position.x, 10, true);
+				else
+					AirSplash(transform.position.x, 10);
 			}
 		}
+
 		if (!touchingPlatform)
 		{
 			Vector3 camCurVec = curCam.transform.position;
@@ -85,6 +113,7 @@ public class Runner : MonoBehaviour
 
 			curCam.transform.position = camCurVec;
 		}
+
 		if (touchingPlatform)
 		{
 			Vector3 camCurVec = curCam.transform.position;
@@ -95,6 +124,7 @@ public class Runner : MonoBehaviour
 
 			curCam.transform.position = camCurVec;
 		}
+
 		if (Input.GetKey(KeyCode.Escape))
 		{
 			Application.Quit();
@@ -126,8 +156,6 @@ public class Runner : MonoBehaviour
 				animator.speed = 0.10f;
 			else
 				animator.speed = 2f;
-
-			//    animator.SetTrigger("Jump");
 		}
 
 	}
@@ -176,7 +204,7 @@ public class Runner : MonoBehaviour
 
 	}
 
-	public void AirSplash(float xpos, float velocity)
+	public void AirSplash(float xpos, float velocity, bool upside = false)
 	{
 		//Set the lifetime of the particle system.
 		float lifetime = 0.93f + Mathf.Abs(velocity) * 0.07f;
@@ -193,13 +221,18 @@ public class Runner : MonoBehaviour
 		// Quaternion rotation = Quaternion.LookRotation(new Vector3(xpos, 1 + 8, 5) - position);
 
 		//Create the splash and tell it to destroy itself.
-		GameObject tempObj = Instantiate(airJump, position, Quaternion.identity) as GameObject;
+		GameObject tempObj;
+		if(gameMode2 && !upside)
+			tempObj = Instantiate(airJumpUpside, position, Quaternion.identity) as GameObject;
+		else
+			tempObj = Instantiate(airJump, position, Quaternion.identity) as GameObject;
 		Destroy(tempObj, lifetime / 2);
 
 	}
 
 	void OnCollisionEnter(Collision other)
 	{
+		canRotate = true;
 		touchingPlatform = true;
 		// Splash(transform.position.x, 10);
 		if (other.collider.tag == "Smelly")
@@ -224,6 +257,7 @@ public class Runner : MonoBehaviour
 	void OnCollisionExit()
 	{
 		touchingPlatform = false;
+
 		JumpSplash(transform.position.x, 10);
 
 	}
