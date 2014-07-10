@@ -164,13 +164,19 @@ public class PlayerController : MonoBehaviour
 		waterRun.GetComponent<ParticleSystem>().startLifetime = lifetime;
 
 		//Set the correct position of the particle system.
-		Vector3 position = new Vector3(xpos, transform.position.y - 2, 0);
+		Vector3 position;
+		if(gameMode2 && Physics.gravity.y > 0)
+			position = new Vector3(xpos, transform.position.y + 2, 0);
+		else
+			position = new Vector3(xpos, transform.position.y - 2, 0);
 
 		//This line aims the splash towards the middle. Only use for small bodies of water:
 		Quaternion rotation = Quaternion.LookRotation(new Vector3(xpos, 1 + 8, 5) - position);
 
 		//Create the splash and tell it to destroy itself.
 		GameObject tempSplashObj = Instantiate(waterRun, position, rotation) as GameObject;
+
+
 		Destroy(tempSplashObj, lifetime / 2);
         
 	}
@@ -227,7 +233,7 @@ public class PlayerController : MonoBehaviour
 	{
 		canRotate = true;
 		touchingPlatform = true;
-		Splash(transform.position.x, runnerSpeed);
+		//Splash(transform.position.x, runnerSpeed);
 	//	if (other.collider.tag == "Smelly")
 
 	}

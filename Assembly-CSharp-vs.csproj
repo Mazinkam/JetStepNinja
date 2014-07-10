@@ -64,6 +64,7 @@
      <Compile Include="Assets\Game_Objects\Spawners\Scripts\BottomFloorTileSpawner.cs" />
      <Compile Include="Assets\Game_Objects\Spawners\Scripts\PulsingMovement.cs" />
      <Compile Include="Assets\Game_Objects\Spawners\Scripts\TopFloorTileSpawner.cs" />
+     <Compile Include="Assets\Game_Objects\Tiles\Scripts\RepeatingTiles.cs" />
      <Compile Include="Assets\Leaderboard\Scripts\HSController.cs" />
      <Compile Include="Assets\Leaderboard\Scripts\HighScoreController.cs" />
      <Compile Include="Assets\Leaderboard\Scripts\LeaderboardGuiScript.cs" />

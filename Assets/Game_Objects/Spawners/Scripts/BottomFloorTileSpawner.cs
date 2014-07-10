@@ -6,7 +6,7 @@ public class BottomFloorTileSpawner : MonoBehaviour {
 	public GameObject[] obj;
 
 	// Use this for initialization
-	void Start () {
+	void Awake () {
 		SpawnFirstTile();
 		SpawnSecondTile();
 	}
@@ -20,7 +20,8 @@ public class BottomFloorTileSpawner : MonoBehaviour {
 	void SpawnSecondTile()
 	{
 		GameObject secondTile = (GameObject)Instantiate(obj[1], transform.position, Quaternion.identity);
-		secondTile.transform.position = new Vector3(199,-1f,-15.1f);
+		float temp  = ((MeshRenderer)secondTile.GetComponents<MeshRenderer>()[0]).bounds.size.x;
+		secondTile.transform.position = new Vector3(temp,-1f,-15f);
 
 	}	
 }

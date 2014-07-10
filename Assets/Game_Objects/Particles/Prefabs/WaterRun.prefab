@@ -622,9 +622,9 @@ ParticleSystem:
       minMaxState: 0
     inWorldSpace: 0
   ForceModule:
-    enabled: 0
+    enabled: 1
     x:
-      scalar: 0
+      scalar: -50
       maxCurve:
         serializedVersion: 2
         m_Curve:
