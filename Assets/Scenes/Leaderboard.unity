@@ -84,6 +84,8 @@ GameObject:
   - 4: {fileID: 1134734904}
   - 114: {fileID: 1134734903}
   - 114: {fileID: 1134734902}
+  - 114: {fileID: 1134734905}
+  - 114: {fileID: 1134734906}
   m_Layer: 0
   m_Name: LeaderboardGui
   m_TagString: Untagged
@@ -102,7 +104,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ee9d398de8968148a987d95bc67a671, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skin: {fileID: 11400000, guid: f838b1ef8a994d24c97dd187d4c8a089, type: 2}
 --- !u!114 &1134734903
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -126,6 +127,29 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
+--- !u!114 &1134734905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1134734901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4cf31b94bb69854ebb7a4ec479fd640, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skin: {fileID: 11400000, guid: f838b1ef8a994d24c97dd187d4c8a089, type: 2}
+--- !u!114 &1134734906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1134734901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ced71c0a7e96f90419690ce589877649, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1168621853
 GameObject:
   m_ObjectHideFlags: 0

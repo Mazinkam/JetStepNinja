@@ -19,7 +19,7 @@
 	<DebugType>full</DebugType>
 	<Optimize>false</Optimize>
 	<OutputPath>Temp\bin\Debug\</OutputPath>
-	<DefineConstants>DEBUG;TRACE;UNITY_4_5_0;UNITY_4_5;UNITY_STANDALONE_WIN;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_UNITYEVENTS;ENABLE_NEW_HIERARCHY ;ENABLE_AUDIO_FMOD;UNITY_STANDALONE;ENABLE_MONO;ENABLE_TERRAIN;ENABLE_SUBSTANCE;ENABLE_GENERICS;INCLUDE_WP8SUPPORT;ENABLE_MOVIES;ENABLE_WWW;ENABLE_IMAGEEFFECTS;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_2D_PHYSICS;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_DUCK_TYPING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_WIN</DefineConstants>
+	<DefineConstants>DEBUG;TRACE;UNITY_4_5_1;UNITY_4_5;UNITY_ANDROID;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_UNITYEVENTS;ENABLE_NEW_HIERARCHY ;ENABLE_AUDIO_FMOD;ENABLE_MONO;ENABLE_TERRAIN;ENABLE_SUBSTANCE;ENABLE_GENERICS;INCLUDE_WP8SUPPORT;ENABLE_WWW;ENABLE_IMAGEEFFECTS;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_CLOTH;UNITY_ANDROID_API;ENABLE_2D_PHYSICS;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_WIN</DefineConstants>
 	<ErrorReport>prompt</ErrorReport>
 	<WarningLevel>4</WarningLevel>
 	<NoWarn>0169</NoWarn>
@@ -46,50 +46,38 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\BasicObstacleMovement.cs" />
-     <Compile Include="Assets\BasicObstacleSpawner.cs" />
-     <Compile Include="Assets\CameraControlAspect.cs" />
-     <Compile Include="Assets\CameraZoom.cs" />
-     <Compile Include="Assets\Cookie\MovingShadows.cs" />
-     <Compile Include="Assets\DestroyerScript.cs" />
-     <Compile Include="Assets\FloorTileSpawner.cs" />
-     <Compile Include="Assets\GameMapGUI.cs" />
-     <Compile Include="Assets\Leaderboard\LeaderboardGuiScript.cs" />
-     <Compile Include="Assets\Managers\EnemyManager.cs" />
-     <Compile Include="Assets\Managers\GUIManager.cs" />
-     <Compile Include="Assets\Managers\GameEventManager.cs" />
-     <Compile Include="Assets\Managers\HSController.cs" />
-     <Compile Include="Assets\Managers\HighScoreController.cs" />
-     <Compile Include="Assets\Managers\ParticleSystemManager.cs" />
-     <Compile Include="Assets\Menu\LeaderboardButtonScript.cs" />
-     <Compile Include="Assets\Menu\MenuGui.cs" />
-     <Compile Include="Assets\Menu\PlayButtonScript.cs" />
-     <Compile Include="Assets\Menu\QuitButtonScript.cs" />
-     <Compile Include="Assets\Menu\StoreButtonScript.cs" />
-     <Compile Include="Assets\PlaneScale.cs" />
-     <Compile Include="Assets\Platform\EnemyPlatform.cs" />
-     <Compile Include="Assets\Platform\PlatformManager.cs" />
-     <Compile Include="Assets\Platform\PlatformTouch.cs" />
-     <Compile Include="Assets\PlayButtonScript2.cs" />
-     <Compile Include="Assets\Runner\Runner.cs" />
-     <Compile Include="Assets\RunnerMainMenu.cs" />
-     <Compile Include="Assets\Skyline\SkylineManager.cs" />
-     <Compile Include="Assets\Store\StoreGuiScript.cs" />
-     <Compile Include="Assets\TrainingButton.cs" />
-     <Compile Include="Assets\WorldMapMove.cs" />
-     <None Include="Assets\Menu\Texture Only.shader" />
+     <Compile Include="Assets\GameMap\Prefabs\CameraZoom.cs" />
+     <Compile Include="Assets\GameMap\Scripts\Buttons\LeaderboardButtonScript.cs" />
+     <Compile Include="Assets\GameMap\Scripts\Buttons\PlayButtonScript.cs" />
+     <Compile Include="Assets\GameMap\Scripts\Buttons\QuitButtonScript.cs" />
+     <Compile Include="Assets\GameMap\Scripts\Buttons\StoreButtonScript.cs" />
+     <Compile Include="Assets\GameMap\Scripts\Buttons\TrainingButton.cs" />
+     <Compile Include="Assets\GameMap\Scripts\GameMapGUI.cs" />
+     <Compile Include="Assets\GameMap\Scripts\MenuGui.cs" />
+     <Compile Include="Assets\GameMap\Scripts\WorldMapMove.cs" />
+     <Compile Include="Assets\Game_Objects\Destroyers\Scripts\DestroyerScript.cs" />
+     <Compile Include="Assets\Game_Objects\Obstacles\Scripts\BasicObstacleMovement.cs" />
+     <Compile Include="Assets\Game_Objects\Obstacles\Scripts\HomingObstacle.cs" />
+     <Compile Include="Assets\Game_Objects\Obstacles\Scripts\RotateObstacle.cs" />
+     <Compile Include="Assets\Game_Objects\Player\Scripts\PlayerController.cs" />
+     <Compile Include="Assets\Game_Objects\Spawners\Scripts\BasicObstacleSpawner.cs" />
+     <Compile Include="Assets\Game_Objects\Spawners\Scripts\BottomFloorTileSpawner.cs" />
+     <Compile Include="Assets\Game_Objects\Spawners\Scripts\PulsingMovement.cs" />
+     <Compile Include="Assets\Game_Objects\Spawners\Scripts\TopFloorTileSpawner.cs" />
+     <Compile Include="Assets\Leaderboard\Scripts\HSController.cs" />
+     <Compile Include="Assets\Leaderboard\Scripts\HighScoreController.cs" />
+     <Compile Include="Assets\Leaderboard\Scripts\LeaderboardGuiScript.cs" />
+     <Compile Include="Assets\Store\Scripts\StoreGuiScript.cs" />
      <None Include="Assets\Server\crossdomain.xml" />
-     <None Include="Assets\CuteMolly\Parallax\ReadMe.txt" />
      <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
      <None Include="Assets\Standard Assets\Water (Pro Only)\Water4\Sources\Shaders\FX-SimpleWater4.shader" />
-     <None Include="Assets\Skyline\AlphaTest-DoubleSided.shader" />
      <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
      <None Include="Assets\Standard Assets\Water (Basic)\Sources\Shaders\FX-Water Simple.shader" />
      <None Include="Assets\Standard Assets\Water (Pro Only)\Sources\Shaders\FX-Water.shader" />
      <None Include="Assets\Standard Assets\Water (Pro Only)\Water4\Sources\Shaders\WaterInclude.cginc" />
      <None Include="Assets\Standard Assets\Water (Pro Only)\Water4\Sources\Shaders\FX-Water4.shader" />
  <Reference Include="Assembly-UnityScript-firstpass">
- <HintPath>C:/Users/Marko/Projects/JetStepNinja/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
+ <HintPath>C:/Users/user/Documents/GitHub/JetStepNinja/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>

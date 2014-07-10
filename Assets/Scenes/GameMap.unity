@@ -464,9 +464,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bddc4ddce3371d4aa8d2271de340451, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  zoom: 20
-  normal: 60
-  smooth: 5
 --- !u!114 &53164392
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1822,7 +1819,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 5c081a24cd189364981fde138da94411, type: 2}
+  - {fileID: 2100000, guid: e5beb139bb9c4eb429dac50b19ba4f7c, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -1873,7 +1870,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1552706259}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69131a53288d7e6409a5716c005c40e1, type: 3}
+  m_Script: {fileID: 11500000, guid: 37003cc199541dd46b0fb4313649f596, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &1655349717
