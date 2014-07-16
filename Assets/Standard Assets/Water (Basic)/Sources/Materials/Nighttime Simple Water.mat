@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Nighttime Simple Water
-  m_Shader: {fileID: 4800000, guid: 9dccc8e8f0da4494991c26ef59019551, type: 3}
+  m_Shader: {fileID: 7, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: []
   m_CustomRenderQueue: -1
   m_SavedProperties:
@@ -172,12 +172,12 @@ Material:
         second: {r: 0, g: 0, b: 0, a: .400000006}
       data:
         first:
-          name: _RefrColor
-        second: {r: .340000004, g: .850000024, b: .920000017, a: 1}
-      data:
-        first:
           name: _BumpMap_ST
         second: {r: 1, g: 1, b: 0, a: 0}
+      data:
+        first:
+          name: _RefrColor
+        second: {r: .340000004, g: .850000024, b: .920000017, a: 1}
       data:
         first:
           name: WaveSpeed
