@@ -19,7 +19,7 @@ Material:
         second:
           m_Texture: {fileID: 2800000, guid: 939a9029ca6bc7a469a772e9b6008dd1, type: 3}
           m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 24.1146088, y: 0}
+          m_Offset: {x: 2.91113448, y: 0}
       data:
         first:
           name: _DecalTex

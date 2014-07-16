@@ -18,7 +18,7 @@ public class ParalaxMovement : MonoBehaviour {
 			//find the materials current offset
 			Vector2 offset = materials[i].mainTextureOffset;
 			//adjust the offset based on the speed
-			offset.x += speeds[i];
+			offset.x += 1 * speeds[i];
 			//apply the new offset
 			materials[i].mainTextureOffset = offset;
 		}
