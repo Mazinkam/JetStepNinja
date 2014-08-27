@@ -1,9 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workspace />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Game_Objects\Tiles\Scripts\ParalaxMovement.cs">
     <Files>
-      <File FileName="..\..\..\Desktop\1849692017Game\2014OT_Code_game\2014OT_07_Code\Ch7_AngryBirds_CS\Assets\Scripts\ParallaxScroll.cs" Line="7" Column="1" />
-      <File FileName="Assets\Game_Objects\Tiles\Scripts\ParalaxMovement.cs" Line="21" Column="14" />
+      <File FileName="Assets\Game_Objects\Player\Scripts\PlayerController.cs" Line="36" Column="1" />
+      <File FileName="Assets\Game_Objects\Tiles\Scripts\ParalaxMovement.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

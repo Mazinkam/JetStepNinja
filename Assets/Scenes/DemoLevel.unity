@@ -233,6 +233,7 @@ GameObject:
   - 33: {fileID: 229916657}
   - 23: {fileID: 229916656}
   - 114: {fileID: 229916655}
+  - 114: {fileID: 229916659}
   m_Layer: 0
   m_Name: ForestLevelBackground
   m_TagString: Untagged
@@ -308,7 +309,18 @@ Transform:
   m_LocalScale: {x: 13, y: 1, z: 8}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
+--- !u!114 &229916659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 229916654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4477568f8b4658498241e0e7e6e956d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &318521811
 Prefab:
   m_ObjectHideFlags: 0
@@ -484,7 +496,7 @@ Transform:
   m_LocalScale: {x: 100, y: 100, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
 --- !u!1 &396858526
 GameObject:
   m_ObjectHideFlags: 0
@@ -1105,8 +1117,8 @@ Transform:
   m_PrefabInternal: {fileID: 2059651782}
   m_GameObject: {fileID: 1531926136}
   m_LocalRotation: {x: 0, y: .707106829, z: 0, w: .707106829}
-  m_LocalPosition: {x: 0, y: 3.4000001, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -15.5451498, y: 3.4000001, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 1855802568}
   - {fileID: 182880566}
@@ -1164,8 +1176,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   curCam: {fileID: 1489935831}
-  jumpVelocity: {x: 0, y: 20, z: 0}
-  landVelocity: {x: 0, y: -30, z: 0}
+  jumpVelocity: {x: 0, y: 25, z: 0}
+  landVelocity: {x: 0, y: -50, z: 0}
   gameOverY: 0
   waterRun: {fileID: 100000, guid: ad719e25a8d71c1419c050effb187e3f, type: 2}
   waterJump: {fileID: 100000, guid: 5cfa67cb802c3d642b71e12e9aec9a8e, type: 2}
@@ -1495,7 +1507,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400040, guid: 6e47653a02b1a0841ae70cd6406250f9, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -15.5451498
       objectReference: {fileID: 0}
     - target: {fileID: 400040, guid: 6e47653a02b1a0841ae70cd6406250f9, type: 2}
       propertyPath: m_LocalPosition.y
@@ -1540,6 +1552,26 @@ Prefab:
     - target: {fileID: 10800000, guid: 6e47653a02b1a0841ae70cd6406250f9, type: 2}
       propertyPath: m_Intensity
       value: .330000013
+      objectReference: {fileID: 0}
+    - target: {fileID: 400040, guid: 6e47653a02b1a0841ae70cd6406250f9, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 400040, guid: 6e47653a02b1a0841ae70cd6406250f9, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 400040, guid: 6e47653a02b1a0841ae70cd6406250f9, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 6e47653a02b1a0841ae70cd6406250f9, type: 2}
+      propertyPath: jumpVelocity.y
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 6e47653a02b1a0841ae70cd6406250f9, type: 2}
+      propertyPath: landVelocity.y
+      value: -50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6e47653a02b1a0841ae70cd6406250f9, type: 2}
