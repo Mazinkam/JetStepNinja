@@ -11,7 +11,7 @@ public class ParalaxMovement : MonoBehaviour {
 	}
 	
 	//at the end of the frame
-	public void LateUpdate() {
+	public void FixedUpdate() {
 
 		//loop through the list of materials
 		for(int i=0;i<materials.Length;i++) {

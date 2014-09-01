@@ -8,11 +8,9 @@ public class ScreenPlaneSize : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 	
-		float height = 2.0f * Mathf.Tan(0.5f * Camera.main.fieldOfView * Mathf.Deg2Rad) * 15 ;
+		float height = 2.0f * Mathf.Tan(0.5f * Camera.main.fieldOfView * Mathf.Deg2Rad) * 13.5f ;
 		float width = height * Screen.width / Screen.height;
-		
-		
-		
+
 		gameObject.transform.localScale = new Vector3( width, 1, height);
 		
 		Debug.Log("width: " + width + " height: " + height );

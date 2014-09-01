@@ -1,0 +1,626 @@
+fileFormatVersion: 2
+guid: 94a11e45178913a47a1245c48c33e395
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: Bodymain
+    100002: ChestCtrl
+    100004: //RootNode
+    100006: Dress
+    100008: HairEars
+    100010: Head
+    100012: Head_Top
+    100014: HeadCtrl
+    100016: Hip
+    100018: HipCtrl
+    100020: L_ArmCtrl
+    100022: L_ArmIK
+    100024: L_Clavicle
+    100026: L_Elbow
+    100028: L_Finger
+    100030: L_Leg_CTRL
+    100032: L_Leg_Foot
+    100034: L_Leg_Knee
+    100036: L_Leg_Toe
+    100038: L_Leg_Top
+    100040: L_LegIK
+    100042: L_Shoulder
+    100044: L_Wrist
+    100046: MainCtrl
+    100048: Neck_01
+    100050: Neck_02
+    100052: R_ArmCtrl
+    100054: R_ArmIK
+    100056: R_Clavicle
+    100058: R_Elbow
+    100060: R_Finger
+    100062: R_Leg_CTRL
+    100064: R_Leg_Foot
+    100066: R_Leg_Knee
+    100068: R_Leg_Toe
+    100070: R_Leg_Top
+    100072: R_LegIK
+    100074: R_Shoulder
+    100076: R_Wrist
+    100078: Spine_01
+    100080: Spine_02
+    100082: Spine_03
+    100084: Spine_04
+    100086: SpineIK
+    100088: SpineIKCurve
+    400000: Bodymain
+    400002: ChestCtrl
+    400004: //RootNode
+    400006: Dress
+    400008: HairEars
+    400010: Head
+    400012: Head_Top
+    400014: HeadCtrl
+    400016: Hip
+    400018: HipCtrl
+    400020: L_ArmCtrl
+    400022: L_ArmIK
+    400024: L_Clavicle
+    400026: L_Elbow
+    400028: L_Finger
+    400030: L_Leg_CTRL
+    400032: L_Leg_Foot
+    400034: L_Leg_Knee
+    400036: L_Leg_Toe
+    400038: L_Leg_Top
+    400040: L_LegIK
+    400042: L_Shoulder
+    400044: L_Wrist
+    400046: MainCtrl
+    400048: Neck_01
+    400050: Neck_02
+    400052: R_ArmCtrl
+    400054: R_ArmIK
+    400056: R_Clavicle
+    400058: R_Elbow
+    400060: R_Finger
+    400062: R_Leg_CTRL
+    400064: R_Leg_Foot
+    400066: R_Leg_Knee
+    400068: R_Leg_Toe
+    400070: R_Leg_Top
+    400072: R_LegIK
+    400074: R_Shoulder
+    400076: R_Wrist
+    400078: Spine_01
+    400080: Spine_02
+    400082: Spine_03
+    400084: Spine_04
+    400086: SpineIK
+    400088: SpineIKCurve
+    2300000: Dress
+    2300002: HairEars
+    3300000: Dress
+    3300002: HairEars
+    4300000: Bodymain
+    4300002: HairEars
+    4300004: Dress
+    7400000: Run
+    7400002: Jump
+    7400004: Fall
+    7400006: Death
+    9500000: //RootNode
+    13700000: Bodymain
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Run
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 23
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Bodymain
+        weight: 1
+      - path: Dress
+        weight: 1
+      - path: HairEars
+        weight: 1
+      - path: Hip
+        weight: 1
+      - path: Hip/L_Leg_Top
+        weight: 1
+      - path: Hip/L_Leg_Top/L_Leg_Knee
+        weight: 1
+      - path: Hip/L_Leg_Top/L_Leg_Knee/L_Leg_Foot
+        weight: 1
+      - path: Hip/L_Leg_Top/L_Leg_Knee/L_Leg_Foot/L_Leg_Toe
+        weight: 1
+      - path: Hip/R_Leg_Top
+        weight: 1
+      - path: Hip/R_Leg_Top/R_Leg_Knee
+        weight: 1
+      - path: Hip/R_Leg_Top/R_Leg_Knee/R_Leg_Foot
+        weight: 1
+      - path: Hip/R_Leg_Top/R_Leg_Knee/R_Leg_Foot/R_Leg_Toe
+        weight: 1
+      - path: Hip/Spine_01
+        weight: 1
+      - path: Hip/Spine_01/Spine_02
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/L_Clavicle
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/L_Clavicle/L_Shoulder
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/L_Clavicle/L_Shoulder/L_Elbow
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/L_Clavicle/L_Shoulder/L_Elbow/L_Wrist
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/L_Clavicle/L_Shoulder/L_Elbow/L_Wrist/L_Finger
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/Neck_01
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/Neck_01/Neck_02
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/Neck_01/Neck_02/Head
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/Neck_01/Neck_02/Head/Head_Top
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/R_Clavicle
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/R_Clavicle/R_Shoulder
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/R_Clavicle/R_Shoulder/R_Elbow
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/R_Clavicle/R_Shoulder/R_Elbow/R_Wrist
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/R_Clavicle/R_Shoulder/R_Elbow/R_Wrist/R_Finger
+        weight: 1
+      - path: L_ArmIK
+        weight: 1
+      - path: L_LegIK
+        weight: 1
+      - path: MainCtrl
+        weight: 1
+      - path: MainCtrl/HipCtrl
+        weight: 1
+      - path: MainCtrl/HipCtrl/ChestCtrl
+        weight: 1
+      - path: MainCtrl/HipCtrl/ChestCtrl/HeadCtrl
+        weight: 1
+      - path: MainCtrl/HipCtrl/ChestCtrl/L_ArmCtrl
+        weight: 1
+      - path: MainCtrl/HipCtrl/ChestCtrl/R_ArmCtrl
+        weight: 1
+      - path: MainCtrl/L_Leg_CTRL
+        weight: 1
+      - path: MainCtrl/R_Leg_CTRL
+        weight: 1
+      - path: R_ArmIK
+        weight: 1
+      - path: R_LegIK
+        weight: 1
+      - path: SpineIK
+        weight: 1
+      - path: SpineIKCurve
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Jump
+      takeName: Take 001
+      firstFrame: 25
+      lastFrame: 36
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Bodymain
+        weight: 1
+      - path: Dress
+        weight: 1
+      - path: HairEars
+        weight: 1
+      - path: Hip
+        weight: 1
+      - path: Hip/L_Leg_Top
+        weight: 1
+      - path: Hip/L_Leg_Top/L_Leg_Knee
+        weight: 1
+      - path: Hip/L_Leg_Top/L_Leg_Knee/L_Leg_Foot
+        weight: 1
+      - path: Hip/L_Leg_Top/L_Leg_Knee/L_Leg_Foot/L_Leg_Toe
+        weight: 1
+      - path: Hip/R_Leg_Top
+        weight: 1
+      - path: Hip/R_Leg_Top/R_Leg_Knee
+        weight: 1
+      - path: Hip/R_Leg_Top/R_Leg_Knee/R_Leg_Foot
+        weight: 1
+      - path: Hip/R_Leg_Top/R_Leg_Knee/R_Leg_Foot/R_Leg_Toe
+        weight: 1
+      - path: Hip/Spine_01
+        weight: 1
+      - path: Hip/Spine_01/Spine_02
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/L_Clavicle
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/L_Clavicle/L_Shoulder
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/L_Clavicle/L_Shoulder/L_Elbow
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/L_Clavicle/L_Shoulder/L_Elbow/L_Wrist
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/L_Clavicle/L_Shoulder/L_Elbow/L_Wrist/L_Finger
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/Neck_01
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/Neck_01/Neck_02
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/Neck_01/Neck_02/Head
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/Neck_01/Neck_02/Head/Head_Top
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/R_Clavicle
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/R_Clavicle/R_Shoulder
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/R_Clavicle/R_Shoulder/R_Elbow
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/R_Clavicle/R_Shoulder/R_Elbow/R_Wrist
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/R_Clavicle/R_Shoulder/R_Elbow/R_Wrist/R_Finger
+        weight: 1
+      - path: L_ArmIK
+        weight: 1
+      - path: L_LegIK
+        weight: 1
+      - path: MainCtrl
+        weight: 1
+      - path: MainCtrl/HipCtrl
+        weight: 1
+      - path: MainCtrl/HipCtrl/ChestCtrl
+        weight: 1
+      - path: MainCtrl/HipCtrl/ChestCtrl/HeadCtrl
+        weight: 1
+      - path: MainCtrl/HipCtrl/ChestCtrl/L_ArmCtrl
+        weight: 1
+      - path: MainCtrl/HipCtrl/ChestCtrl/R_ArmCtrl
+        weight: 1
+      - path: MainCtrl/L_Leg_CTRL
+        weight: 1
+      - path: MainCtrl/R_Leg_CTRL
+        weight: 1
+      - path: R_ArmIK
+        weight: 1
+      - path: R_LegIK
+        weight: 1
+      - path: SpineIK
+        weight: 1
+      - path: SpineIKCurve
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Fall
+      takeName: Take 001
+      firstFrame: 36
+      lastFrame: 48
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Bodymain
+        weight: 1
+      - path: Dress
+        weight: 1
+      - path: HairEars
+        weight: 1
+      - path: Hip
+        weight: 1
+      - path: Hip/L_Leg_Top
+        weight: 1
+      - path: Hip/L_Leg_Top/L_Leg_Knee
+        weight: 1
+      - path: Hip/L_Leg_Top/L_Leg_Knee/L_Leg_Foot
+        weight: 1
+      - path: Hip/L_Leg_Top/L_Leg_Knee/L_Leg_Foot/L_Leg_Toe
+        weight: 1
+      - path: Hip/R_Leg_Top
+        weight: 1
+      - path: Hip/R_Leg_Top/R_Leg_Knee
+        weight: 1
+      - path: Hip/R_Leg_Top/R_Leg_Knee/R_Leg_Foot
+        weight: 1
+      - path: Hip/R_Leg_Top/R_Leg_Knee/R_Leg_Foot/R_Leg_Toe
+        weight: 1
+      - path: Hip/Spine_01
+        weight: 1
+      - path: Hip/Spine_01/Spine_02
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/L_Clavicle
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/L_Clavicle/L_Shoulder
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/L_Clavicle/L_Shoulder/L_Elbow
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/L_Clavicle/L_Shoulder/L_Elbow/L_Wrist
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/L_Clavicle/L_Shoulder/L_Elbow/L_Wrist/L_Finger
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/Neck_01
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/Neck_01/Neck_02
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/Neck_01/Neck_02/Head
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/Neck_01/Neck_02/Head/Head_Top
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/R_Clavicle
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/R_Clavicle/R_Shoulder
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/R_Clavicle/R_Shoulder/R_Elbow
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/R_Clavicle/R_Shoulder/R_Elbow/R_Wrist
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/R_Clavicle/R_Shoulder/R_Elbow/R_Wrist/R_Finger
+        weight: 1
+      - path: L_ArmIK
+        weight: 1
+      - path: L_LegIK
+        weight: 1
+      - path: MainCtrl
+        weight: 1
+      - path: MainCtrl/HipCtrl
+        weight: 1
+      - path: MainCtrl/HipCtrl/ChestCtrl
+        weight: 1
+      - path: MainCtrl/HipCtrl/ChestCtrl/HeadCtrl
+        weight: 1
+      - path: MainCtrl/HipCtrl/ChestCtrl/L_ArmCtrl
+        weight: 1
+      - path: MainCtrl/HipCtrl/ChestCtrl/R_ArmCtrl
+        weight: 1
+      - path: MainCtrl/L_Leg_CTRL
+        weight: 1
+      - path: MainCtrl/R_Leg_CTRL
+        weight: 1
+      - path: R_ArmIK
+        weight: 1
+      - path: R_LegIK
+        weight: 1
+      - path: SpineIK
+        weight: 1
+      - path: SpineIKCurve
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Death
+      takeName: Take 001
+      firstFrame: 49
+      lastFrame: 72
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Bodymain
+        weight: 1
+      - path: Dress
+        weight: 1
+      - path: HairEars
+        weight: 1
+      - path: Hip
+        weight: 1
+      - path: Hip/L_Leg_Top
+        weight: 1
+      - path: Hip/L_Leg_Top/L_Leg_Knee
+        weight: 1
+      - path: Hip/L_Leg_Top/L_Leg_Knee/L_Leg_Foot
+        weight: 1
+      - path: Hip/L_Leg_Top/L_Leg_Knee/L_Leg_Foot/L_Leg_Toe
+        weight: 1
+      - path: Hip/R_Leg_Top
+        weight: 1
+      - path: Hip/R_Leg_Top/R_Leg_Knee
+        weight: 1
+      - path: Hip/R_Leg_Top/R_Leg_Knee/R_Leg_Foot
+        weight: 1
+      - path: Hip/R_Leg_Top/R_Leg_Knee/R_Leg_Foot/R_Leg_Toe
+        weight: 1
+      - path: Hip/Spine_01
+        weight: 1
+      - path: Hip/Spine_01/Spine_02
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/L_Clavicle
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/L_Clavicle/L_Shoulder
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/L_Clavicle/L_Shoulder/L_Elbow
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/L_Clavicle/L_Shoulder/L_Elbow/L_Wrist
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/L_Clavicle/L_Shoulder/L_Elbow/L_Wrist/L_Finger
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/Neck_01
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/Neck_01/Neck_02
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/Neck_01/Neck_02/Head
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/Neck_01/Neck_02/Head/Head_Top
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/R_Clavicle
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/R_Clavicle/R_Shoulder
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/R_Clavicle/R_Shoulder/R_Elbow
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/R_Clavicle/R_Shoulder/R_Elbow/R_Wrist
+        weight: 1
+      - path: Hip/Spine_01/Spine_02/Spine_03/Spine_04/R_Clavicle/R_Shoulder/R_Elbow/R_Wrist/R_Finger
+        weight: 1
+      - path: L_ArmIK
+        weight: 1
+      - path: L_LegIK
+        weight: 1
+      - path: MainCtrl
+        weight: 1
+      - path: MainCtrl/HipCtrl
+        weight: 1
+      - path: MainCtrl/HipCtrl/ChestCtrl
+        weight: 1
+      - path: MainCtrl/HipCtrl/ChestCtrl/HeadCtrl
+        weight: 1
+      - path: MainCtrl/HipCtrl/ChestCtrl/L_ArmCtrl
+        weight: 1
+      - path: MainCtrl/HipCtrl/ChestCtrl/R_ArmCtrl
+        weight: 1
+      - path: MainCtrl/L_Leg_CTRL
+        weight: 1
+      - path: MainCtrl/R_Leg_CTRL
+        weight: 1
+      - path: R_ArmIK
+        weight: 1
+      - path: R_LegIK
+        weight: 1
+      - path: SpineIK
+        weight: 1
+      - path: SpineIKCurve
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
