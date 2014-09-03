@@ -68,10 +68,12 @@
      <Compile Include="Assets\Game_Objects\Tiles\Scripts\ParalaxMovement.cs" />
      <Compile Include="Assets\Game_Objects\Tiles\Scripts\RepeatingTiles.cs" />
      <Compile Include="Assets\Game_Objects\Tiles\Scripts\ScreenPlaneSize.cs" />
+     <Compile Include="Assets\Game_Objects\Tiles\Scripts\ScreenPlaneSizeClose.cs" />
      <Compile Include="Assets\Leaderboard\Scripts\HSController.cs" />
      <Compile Include="Assets\Leaderboard\Scripts\HighScoreController.cs" />
      <Compile Include="Assets\Leaderboard\Scripts\LeaderboardGuiScript.cs" />
      <Compile Include="Assets\Store\Scripts\StoreGuiScript.cs" />
+     <Compile Include="Assets\UmeChan\UmeController.cs" />
      <None Include="Assets\Server\crossdomain.xml" />
      <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
      <None Include="Assets\Standard Assets\Water (Pro Only)\Water4\Sources\Shaders\FX-SimpleWater4.shader" />
