@@ -11,7 +11,7 @@ GameObject:
   - 198: {fileID: 19800000}
   - 199: {fileID: 19900000}
   m_Layer: 0
-  m_Name: JumpSplash
+  m_Name: WaterRun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -42,7 +42,7 @@ ParticleSystem:
   looping: 0
   prewarm: 0
   playOnAwake: 1
-  moveWithTransform: 1
+  moveWithTransform: 0
   InitialModule:
     enabled: 1
     startLifetime:
@@ -251,9 +251,9 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
       minMaxState: 0
-    gravityModifier: 2
+    gravityModifier: 0
     inheritVelocity: 0
-    maxNumParticles: 5000
+    maxNumParticles: 500
   ShapeModule:
     serializedVersion: 2
     enabled: 1
@@ -303,9 +303,9 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
       minMaxState: 0
-    cnt0: 300
-    cnt1: 300
-    cnt2: 300
+    cnt0: 30
+    cnt1: 30
+    cnt2: 30
     cnt3: 30
     time0: 0
     time1: .0500000007
@@ -313,19 +313,19 @@ ParticleSystem:
     time3: .150000006
     m_BurstCount: 3
   SizeModule:
-    enabled: 0
+    enabled: 1
     curve:
-      scalar: 1
+      scalar: 10
       maxCurve:
         serializedVersion: 2
         m_Curve:
         - time: 0
-          value: 1
+          value: .480000019
           inSlope: 0
           outSlope: 0
           tangentMode: 0
         - time: 1
-          value: 1
+          value: .519999981
           inSlope: 0
           outSlope: 0
           tangentMode: 0
@@ -622,9 +622,9 @@ ParticleSystem:
       minMaxState: 0
     inWorldSpace: 0
   ForceModule:
-    enabled: 0
+    enabled: 1
     x:
-      scalar: 0
+      scalar: -70
       maxCurve:
         serializedVersion: 2
         m_Curve:

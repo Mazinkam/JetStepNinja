@@ -11,7 +11,7 @@ GameObject:
   - 198: {fileID: 19800000}
   - 199: {fileID: 19900000}
   m_Layer: 0
-  m_Name: AirSplashUpside
+  m_Name: JumpSplash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -42,7 +42,7 @@ ParticleSystem:
   looping: 0
   prewarm: 0
   playOnAwake: 1
-  moveWithTransform: 1
+  moveWithTransform: 0
   InitialModule:
     enabled: 1
     startLifetime:
@@ -388,13 +388,13 @@ ParticleSystem:
       maxGradient:
         key0:
           serializedVersion: 2
-          rgba: 4283519470
+          rgba: 4278190080
         key1:
           serializedVersion: 2
-          rgba: 4278190335
+          rgba: 4293710202
         key2:
           serializedVersion: 2
-          rgba: 3223917
+          rgba: 9398784
         key3:
           serializedVersion: 2
           rgba: 0
@@ -410,8 +410,8 @@ ParticleSystem:
         key7:
           serializedVersion: 2
           rgba: 0
-        ctime0: 386
-        ctime1: 10023
+        ctime0: 0
+        ctime1: 29876
         ctime2: 58211
         ctime3: 0
         ctime4: 0
@@ -622,9 +622,9 @@ ParticleSystem:
       minMaxState: 0
     inWorldSpace: 0
   ForceModule:
-    enabled: 1
+    enabled: 0
     x:
-      scalar: -100
+      scalar: 0
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -657,7 +657,7 @@ ParticleSystem:
         m_PostInfinity: 2
       minMaxState: 0
     y:
-      scalar: -100
+      scalar: 0
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -1073,7 +1073,7 @@ ParticleSystemRenderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 642367443312c224bb40c297365867ac, type: 2}
+  - {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
