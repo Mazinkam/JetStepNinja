@@ -624,7 +624,7 @@ ParticleSystem:
   ForceModule:
     enabled: 1
     x:
-      scalar: -70
+      scalar: -100
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -1073,7 +1073,7 @@ ParticleSystemRenderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 96558d9af5ccba84da0a06dc9afa072d, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
