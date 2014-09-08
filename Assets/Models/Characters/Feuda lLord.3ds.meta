@@ -1,0 +1,142 @@
+fileFormatVersion: 2
+guid: 79d6ef8fd6df93540b759dc3e4f0e5f6
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: '00        '
+    100002: '01        '
+    100004: '02        '
+    100006: '03        '
+    100008: '04        '
+    100010: '05        '
+    100012: 'DEFAULT   '
+    100014: //RootNode
+    100016: 'FACE00    '
+    100018: 'HAKAMA00  '
+    100020: 'KAMI00    '
+    100022: 'KIMONO00  '
+    100024: 'MAGE00    '
+    100026: 'MEG       '
+    100028: 'UWA00     '
+    100030: 'UWA01     '
+    100032: 'UWA02     '
+    400000: '00        '
+    400002: '01        '
+    400004: '02        '
+    400006: '03        '
+    400008: '04        '
+    400010: '05        '
+    400012: 'DEFAULT   '
+    400014: //RootNode
+    400016: 'FACE00    '
+    400018: 'HAKAMA00  '
+    400020: 'KAMI00    '
+    400022: 'KIMONO00  '
+    400024: 'MAGE00    '
+    400026: 'MEG       '
+    400028: 'UWA00     '
+    400030: 'UWA01     '
+    400032: 'UWA02     '
+    2300000: '00        '
+    2300002: '01        '
+    2300004: '02        '
+    2300006: '03        '
+    2300008: '04        '
+    2300010: '05        '
+    2300012: 'DEFAULT   '
+    2300014: 'FACE00    '
+    2300016: 'HAKAMA00  '
+    2300018: 'KAMI00    '
+    2300020: 'KIMONO00  '
+    2300022: 'MAGE00    '
+    2300024: 'MEG       '
+    2300026: 'UWA00     '
+    2300028: 'UWA01     '
+    2300030: 'UWA02     '
+    3300000: '00        '
+    3300002: '01        '
+    3300004: '02        '
+    3300006: '03        '
+    3300008: '04        '
+    3300010: '05        '
+    3300012: 'DEFAULT   '
+    3300014: 'FACE00    '
+    3300016: 'HAKAMA00  '
+    3300018: 'KAMI00    '
+    3300020: 'KIMONO00  '
+    3300022: 'MAGE00    '
+    3300024: 'MEG       '
+    3300026: 'UWA00     '
+    3300028: 'UWA01     '
+    3300030: 'UWA02     '
+    4300000: '00        '
+    4300002: '01        '
+    4300004: '02        '
+    4300006: '03        '
+    4300008: '04        '
+    4300010: '05        '
+    4300012: 'DEFAULT   '
+    4300014: 'FACE00    '
+    4300016: 'HAKAMA00  '
+    4300018: 'KAMI00    '
+    4300020: 'KIMONO00  '
+    4300022: 'MAGE00    '
+    4300024: 'MEG       '
+    4300026: 'UWA00     '
+    4300028: 'UWA01     '
+    4300030: 'UWA02     '
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .100000001
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 

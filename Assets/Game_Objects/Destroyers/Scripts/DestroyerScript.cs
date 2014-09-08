@@ -11,5 +11,9 @@ public class DestroyerScript : MonoBehaviour {
 			Destroy(other.gameObject);
 			BasicObstacleSpawner.obstacleCount--;
 		}
+		else{
+			Debug.Log("other");
+			Destroy(other.gameObject);
+		}
 	}
 }

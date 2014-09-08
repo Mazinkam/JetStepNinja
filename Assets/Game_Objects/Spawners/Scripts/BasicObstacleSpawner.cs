@@ -15,6 +15,11 @@ public class BasicObstacleSpawner : MonoBehaviour {
 	void Start () {
 		Spawn();
 	}
+
+	void Update(){
+		Spawn();
+	}
+
 	
 	void Spawn()
 	{
@@ -22,7 +27,8 @@ public class BasicObstacleSpawner : MonoBehaviour {
 		{
 			obstacleCount++;
 			Instantiate(obj[Random.Range(0, obj.Length)], transform.position, Quaternion.identity);
-			Invoke("Spawn", Random.Range(spawnMin, spawnMax));
+			Debug.Log("obstacleCount: " + obstacleCount);
+			Invoke("Spawn", 1);
 		}
 	}
 }

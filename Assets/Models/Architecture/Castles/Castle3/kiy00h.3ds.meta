@@ -1,0 +1,112 @@
+fileFormatVersion: 2
+guid: 2de9179283192634fa4ed743db236fe7
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: 'HARI00    '
+    100002: 'ITA00     '
+    100004: 'KEGYO00   '
+    100006: //RootNode
+    100008: 'KOUSHI00  '
+    100010: 'MUNE00    '
+    100012: 'TARUKI00  '
+    100014: 'TARUKI01  '
+    100016: 'YANE00    '
+    100018: 'YANE01    '
+    100020: 'YANE02    '
+    400000: 'HARI00    '
+    400002: 'ITA00     '
+    400004: 'KEGYO00   '
+    400006: //RootNode
+    400008: 'KOUSHI00  '
+    400010: 'MUNE00    '
+    400012: 'TARUKI00  '
+    400014: 'TARUKI01  '
+    400016: 'YANE00    '
+    400018: 'YANE01    '
+    400020: 'YANE02    '
+    2300000: 'HARI00    '
+    2300002: 'ITA00     '
+    2300004: 'KEGYO00   '
+    2300006: 'KOUSHI00  '
+    2300008: 'MUNE00    '
+    2300010: 'TARUKI00  '
+    2300012: 'TARUKI01  '
+    2300014: 'YANE00    '
+    2300016: 'YANE01    '
+    2300018: 'YANE02    '
+    3300000: 'HARI00    '
+    3300002: 'ITA00     '
+    3300004: 'KEGYO00   '
+    3300006: 'KOUSHI00  '
+    3300008: 'MUNE00    '
+    3300010: 'TARUKI00  '
+    3300012: 'TARUKI01  '
+    3300014: 'YANE00    '
+    3300016: 'YANE01    '
+    3300018: 'YANE02    '
+    4300000: 'HARI00    '
+    4300002: 'ITA00     '
+    4300004: 'KEGYO00   '
+    4300006: 'KOUSHI00  '
+    4300008: 'MUNE00    '
+    4300010: 'TARUKI00  '
+    4300012: 'TARUKI01  '
+    4300014: 'YANE00    '
+    4300016: 'YANE01    '
+    4300018: 'YANE02    '
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .100000001
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
