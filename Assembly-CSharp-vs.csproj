@@ -46,7 +46,6 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Booster\Booster.cs" />
      <Compile Include="Assets\Floating Script\floating_object_csharp.cs" />
      <Compile Include="Assets\GameMap\Prefabs\CameraZoom.cs" />
      <Compile Include="Assets\GameMap\Scripts\Buttons\LeaderboardButtonScript.cs" />
