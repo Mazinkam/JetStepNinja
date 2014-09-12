@@ -24,21 +24,21 @@ Material:
         first:
           name: _BumpMap
         second:
-          m_Texture: {fileID: 2800000, guid: a53cf5449d11a15d1100a04b44295342, type: 3}
+          m_Texture: {fileID: 2800000, guid: 9cd8e31d5e27f5440b2767c57411e887, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
         first:
           name: _ColorControlCube
         second:
-          m_Texture: {fileID: 8900000, guid: 98c330f39d11745ad0004adb8d76c639, type: 3}
+          m_Texture: {fileID: 8900000, guid: 15c6acc4f11254a04b03849245d80574, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
         first:
           name: _ColorControl
         second:
-          m_Texture: {fileID: 2800000, guid: 047330f39d11745ad0004adb8d76c639, type: 3}
+          m_Texture: {fileID: 2800000, guid: 8403d3349d112ba4d000be1be39e7c39, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
@@ -134,7 +134,7 @@ Material:
       data:
         first:
           name: WaveSpeed
-        second: {r: 9, g: 4.5, b: -8, a: -3.5}
+        second: {r: 1000, g: -100, b: 100, a: -100}
       data:
         first:
           name: BumpParm

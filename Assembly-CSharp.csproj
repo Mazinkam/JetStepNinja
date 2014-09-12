@@ -46,6 +46,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Booster\Booster.cs" />
      <Compile Include="Assets\Floating Script\floating_object_csharp.cs" />
      <Compile Include="Assets\GameMap\Prefabs\CameraZoom.cs" />
      <Compile Include="Assets\GameMap\Scripts\Buttons\LeaderboardButtonScript.cs" />
@@ -63,6 +64,9 @@
      <Compile Include="Assets\Game_Objects\Player\Scripts\PlayerController.cs" />
      <Compile Include="Assets\Game_Objects\Spawners\Scripts\BasicObstacleSpawner.cs" />
      <Compile Include="Assets\Game_Objects\Spawners\Scripts\BottomFloorTileSpawner.cs" />
+     <Compile Include="Assets\Game_Objects\Spawners\Scripts\Floor_1.cs" />
+     <Compile Include="Assets\Game_Objects\Spawners\Scripts\Floor_2.cs" />
+     <Compile Include="Assets\Game_Objects\Spawners\Scripts\Floor_3.cs" />
      <Compile Include="Assets\Game_Objects\Spawners\Scripts\PulsingMovement.cs" />
      <Compile Include="Assets\Game_Objects\Spawners\Scripts\TopFloorTileSpawner.cs" />
      <Compile Include="Assets\Game_Objects\Tiles\Scripts\ParalaxMovement.cs" />
@@ -72,6 +76,7 @@
      <Compile Include="Assets\Leaderboard\Scripts\HSController.cs" />
      <Compile Include="Assets\Leaderboard\Scripts\HighScoreController.cs" />
      <Compile Include="Assets\Leaderboard\Scripts\LeaderboardGuiScript.cs" />
+     <Compile Include="Assets\Models\Accessories\Script\SineMoveRotate.cs" />
      <Compile Include="Assets\Store\Scripts\StoreGuiScript.cs" />
      <Compile Include="Assets\UmeChan\UmeController.cs" />
      <None Include="Assets\Server\crossdomain.xml" />

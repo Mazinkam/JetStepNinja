@@ -1,34 +1,34 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class BasicObstacleSpawner : MonoBehaviour {
+public class Floor_2 : MonoBehaviour {
 
 	public GameObject[] obj;
 	public float spawnMin = 1f;
 	public float spawnMax = 2f;
-
-	public int basicObstiacleLimit;
-	public static int obstacleCount = 0;
-
+	
+	public int limitFloor_2;
+	public static int countFloor_2 = 0;
+	
 	
 	// Use this for initialization
 	void Start () {
 		Spawn();
 	}
-
+	
 	void Update(){
-	//	Spawn();
+		//	Spawn();
 	}
-
+	
 	
 	void Spawn()
 	{
-		if(obstacleCount <= basicObstiacleLimit)
+		if(countFloor_2 <= limitFloor_2)
 		{
-			obstacleCount++;
+			countFloor_2++;
 			Instantiate(obj[Random.Range(0, obj.Length)], transform.position, Quaternion.identity);
-			Debug.Log("obstacleCount: " + obstacleCount);
-			Invoke("Spawn", 1);
+			//Debug.Log("countFloor_2: " + countFloor_2);
+			Invoke("Spawn", Random.Range(spawnMin, spawnMax));
 		}
 	}
 }

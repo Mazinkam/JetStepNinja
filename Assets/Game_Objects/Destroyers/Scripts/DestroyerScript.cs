@@ -11,9 +11,10 @@ public class DestroyerScript : MonoBehaviour {
 			Destroy(other.gameObject);
 			BasicObstacleSpawner.obstacleCount--;
 		}
-		else{
-			Debug.Log("other");
-			Destroy(other.gameObject);
+		if( other.tag == "Boat"){
+
+			Debug.Log("boat");
+			other.transform.position = new Vector3(Random.Range(500,3000),other.transform.position.y, other.transform.position .z);
 		}
 	}
 }

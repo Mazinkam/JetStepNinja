@@ -16,6 +16,7 @@ public class UmeController : MonoBehaviour
 	private bool reversePhysics = false;
 	private bool gameMode2 = false;
 	private Transform floor, roof;
+	private float splashFix;
 	
 	void Start()
 	{
@@ -76,9 +77,11 @@ public class UmeController : MonoBehaviour
 			if (touchingPlatform)
 			{
 				rigidbody.AddForce(jumpVelocity, ForceMode.VelocityChange);
+				//rigidbody.velocity = jumpVelocity;
 				animator.SetTrigger("Jump");
 				goingDown = false;
 				touchingPlatform = false;
+				landVelocity = new Vector3(0,-20,0);
 			}
 			else if (!touchingPlatform)
 			{
@@ -103,7 +106,7 @@ public class UmeController : MonoBehaviour
 					}
 					canRotate = false;
 				}
-				rigidbody.AddForce(landVelocity, ForceMode.VelocityChange);
+				rigidbody.AddForce(landVelocity = landVelocity + new Vector3(0,-30,0), ForceMode.VelocityChange);
 				goingDown = true;
 				
 				if(gameMode2 && Physics.gravity.y < 0f)
@@ -219,6 +222,16 @@ public class UmeController : MonoBehaviour
 	
 	void OnCollisionStay()
 	{
+
+		if (splashFix > 0.2)
+		{
+			ParticleCreationRun();
+			splashFix = 0;
+		}
+		else
+			splashFix += Time.deltaTime;
+
+
 		touchingPlatform = true;
 		animator.SetBool("Landed", false);
 		
@@ -227,7 +240,7 @@ public class UmeController : MonoBehaviour
 	void OnCollisionExit()
 	{
 		touchingPlatform = false;
-		ParticleCreationRun();
+
 		animator.SetBool("Landed", false);
 	}
 	
