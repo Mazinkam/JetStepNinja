@@ -76,12 +76,11 @@ public class UmeController : MonoBehaviour
 		{
 			if (touchingPlatform)
 			{
-				rigidbody.AddForce(jumpVelocity, ForceMode.VelocityChange);
+				rigidbody.AddForce(jumpVelocity, ForceMode.Impulse);
 				//rigidbody.velocity = jumpVelocity;
 				animator.SetTrigger("Jump");
 				goingDown = false;
 				touchingPlatform = false;
-				landVelocity = new Vector3(0,-20,0);
 			}
 			else if (!touchingPlatform)
 			{
@@ -106,7 +105,7 @@ public class UmeController : MonoBehaviour
 					}
 					canRotate = false;
 				}
-				rigidbody.AddForce(landVelocity = landVelocity + new Vector3(0,-30,0), ForceMode.VelocityChange);
+				rigidbody.AddForce(landVelocity, ForceMode.VelocityChange);
 				goingDown = true;
 				
 				if(gameMode2 && Physics.gravity.y < 0f)
