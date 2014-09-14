@@ -9,7 +9,6 @@ public class DestroyerScript : MonoBehaviour {
 		{
 			Debug.Log("BasicObstacle");
 			Destroy(other.gameObject);
-			BasicObstacleSpawner.obstacleCount--;
 		}
 		if( other.tag == "Boat"){
 

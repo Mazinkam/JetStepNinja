@@ -1,0 +1,137 @@
+fileFormatVersion: 2
+guid: 127524ee03011dc4aa3bd5f6514ad7ed
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: '000       '
+    100002: '002       '
+    100004: KATANA_000
+    100006: KATANA_001
+    100008: KATANA_003
+    100010: KATANA_SAY
+    100012: 'MEG       '
+    100014: 'N_AA      '
+    100016: 'N_ASHI00  '
+    100018: 'N_BB      '
+    100020: N_HAKAMA00
+    100022: N_JYOUHANS
+    100024: 'N_KAMI00  '
+    100026: 'N_KAO00   '
+    100028: 'N_UDE00   '
+    100030: //RootNode
+    400000: '000       '
+    400002: '002       '
+    400004: KATANA_000
+    400006: KATANA_001
+    400008: KATANA_003
+    400010: KATANA_SAY
+    400012: 'MEG       '
+    400014: 'N_AA      '
+    400016: 'N_ASHI00  '
+    400018: 'N_BB      '
+    400020: N_HAKAMA00
+    400022: N_JYOUHANS
+    400024: 'N_KAMI00  '
+    400026: 'N_KAO00   '
+    400028: 'N_UDE00   '
+    400030: //RootNode
+    2300000: '000       '
+    2300002: '002       '
+    2300004: KATANA_000
+    2300006: KATANA_001
+    2300008: KATANA_003
+    2300010: KATANA_SAY
+    2300012: 'MEG       '
+    2300014: 'N_AA      '
+    2300016: 'N_ASHI00  '
+    2300018: 'N_BB      '
+    2300020: N_HAKAMA00
+    2300022: N_JYOUHANS
+    2300024: 'N_KAMI00  '
+    2300026: 'N_KAO00   '
+    2300028: 'N_UDE00   '
+    3300000: '000       '
+    3300002: '002       '
+    3300004: KATANA_000
+    3300006: KATANA_001
+    3300008: KATANA_003
+    3300010: KATANA_SAY
+    3300012: 'MEG       '
+    3300014: 'N_AA      '
+    3300016: 'N_ASHI00  '
+    3300018: 'N_BB      '
+    3300020: N_HAKAMA00
+    3300022: N_JYOUHANS
+    3300024: 'N_KAMI00  '
+    3300026: 'N_KAO00   '
+    3300028: 'N_UDE00   '
+    4300000: '000       '
+    4300002: '002       '
+    4300004: KATANA_000
+    4300006: KATANA_001
+    4300008: KATANA_003
+    4300010: KATANA_SAY
+    4300012: 'MEG       '
+    4300014: 'N_AA      '
+    4300016: 'N_ASHI00  '
+    4300018: 'N_BB      '
+    4300020: N_HAKAMA00
+    4300022: N_JYOUHANS
+    4300024: 'N_KAMI00  '
+    4300026: 'N_KAO00   '
+    4300028: 'N_UDE00   '
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .100000001
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 

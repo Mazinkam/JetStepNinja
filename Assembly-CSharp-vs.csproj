@@ -60,6 +60,8 @@
      <Compile Include="Assets\Game_Objects\Obstacles\Scripts\BasicObstacleMovement.cs" />
      <Compile Include="Assets\Game_Objects\Obstacles\Scripts\HomingObstacle.cs" />
      <Compile Include="Assets\Game_Objects\Obstacles\Scripts\RotateObstacle.cs" />
+     <Compile Include="Assets\Game_Objects\Obstacles\Scripts\SineMoveRotate.cs" />
+     <Compile Include="Assets\Game_Objects\Obstacles\Scripts\SineMoveRotate2.cs" />
      <Compile Include="Assets\Game_Objects\Player\Scripts\PlayerController.cs" />
      <Compile Include="Assets\Game_Objects\Spawners\Scripts\BasicObstacleSpawner.cs" />
      <Compile Include="Assets\Game_Objects\Spawners\Scripts\BottomFloorTileSpawner.cs" />
@@ -75,7 +77,6 @@
      <Compile Include="Assets\Leaderboard\Scripts\HSController.cs" />
      <Compile Include="Assets\Leaderboard\Scripts\HighScoreController.cs" />
      <Compile Include="Assets\Leaderboard\Scripts\LeaderboardGuiScript.cs" />
-     <Compile Include="Assets\Models\Accessories\Script\SineMoveRotate.cs" />
      <Compile Include="Assets\Store\Scripts\StoreGuiScript.cs" />
      <Compile Include="Assets\UmeChan\UmeController.cs" />
      <None Include="Assets\Server\crossdomain.xml" />
