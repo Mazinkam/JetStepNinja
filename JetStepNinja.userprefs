@@ -1,11 +1,11 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Game_Objects\Destroyers\Scripts\DestroyerScript.cs">
     <Files>
-      <File FileName="Assets\UmeChan\UmeController.cs" Line="108" Column="62" />
-      <File FileName="Assets\Game_Objects\Spawners\Scripts\PulsingMovement.cs" Line="28" Column="74" />
-      <File FileName="Assets\Game_Objects\Spawners\Scripts\Floor_3.cs" Line="17" Column="3" />
-      <File FileName="Assets\Game_Objects\Destroyers\Scripts\DestroyerScript.cs" Line="11" Column="30" />
+      <File FileName="Assets\Game_Objects\Destroyers\Scripts\DestroyerScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\UmeChan\UmeController.cs" Line="1" Column="1" />
+      <File FileName="Assets\Game_Objects\Spawners\Scripts\PulsingMovement.cs" Line="1" Column="1" />
+      <File FileName="Assets\Game_Objects\Spawners\Scripts\Floor_3.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
