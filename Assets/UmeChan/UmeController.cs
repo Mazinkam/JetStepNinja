@@ -7,6 +7,7 @@ public class UmeController : MonoBehaviour
 	public GameObject waterRun, waterJump, airJump, airJumpUpside;
 	public float runnerSpeed;
 	public static Transform UmeTransform;
+	public Camera camera;
 	
 	private bool touchingPlatform, goingDown;
 	private Animator animator;
@@ -17,6 +18,7 @@ public class UmeController : MonoBehaviour
 	private bool gameMode2 = false;
 	private Transform floor, roof;
 	private float splashFix;
+	private bool isJumping;
 	
 	void Start()
 	{
@@ -69,9 +71,20 @@ public class UmeController : MonoBehaviour
 			}
 		}
 	}
-	
+
+	void HandleZoom()
+	{
+		if(isJumping){
+			camera.fieldOfView = Mathf.Lerp(camera.fieldOfView,50,Time.deltaTime*3);
+		}
+		else{
+			camera.fieldOfView = Mathf.Lerp(camera.fieldOfView,30,Time.deltaTime*3);
+		}
+	}
+
 	void UpdateJumping ()
 	{
+		HandleZoom();
 		if (Input.GetButtonDown("Jump") || Input.GetMouseButtonDown(0))
 		{
 			if (touchingPlatform)
@@ -81,6 +94,7 @@ public class UmeController : MonoBehaviour
 				animator.SetTrigger("Jump");
 				goingDown = false;
 				touchingPlatform = false;
+				isJumping = true;
 			}
 			else if (!touchingPlatform)
 			{
@@ -107,6 +121,7 @@ public class UmeController : MonoBehaviour
 				}
 				rigidbody.AddForce(landVelocity, ForceMode.VelocityChange);
 				goingDown = true;
+				isJumping = false;
 				
 				if(gameMode2 && Physics.gravity.y < 0f)
 					ParticleCreationJump();
