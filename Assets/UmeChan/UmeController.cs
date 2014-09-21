@@ -13,20 +13,24 @@ public class UmeController : MonoBehaviour
 	private Animator animator;
 	private float speed;
 	private float particleFix = 0;
+
+	private float splashFix;
+	private bool isJumping;
+
+
+	//Game mode 2
 	private bool canRotate = false;
 	private bool reversePhysics = false;
 	private bool gameMode2 = false;
 	private Transform floor, roof;
-	private float splashFix;
-	private bool isJumping;
-	
+
 	void Start()
 	{
 		rigidbody.isKinematic = false;
 		enabled = true;
 		
 		animator = GetComponent<Animator>();
-		animator.speed = 10f;
+		animator.speed = 2f;
 		
 		//	floor = GameObject.Find("BottomFloorSpawner").transform;
 		
@@ -39,9 +43,27 @@ public class UmeController : MonoBehaviour
 	
 	void Update()
 	{
+
+		if(transform.position.y >= 120)
+			rigidbody.velocity = new Vector3(0, -10, 0);
+		
+		//simulating own gravity :D
+		if(transform.position.y <= -10){
+			rigidbody.velocity = new Vector3(0, 0, 0); //preventing the player to go trough the floor if the colliders fail us
+			transform.position = new Vector3(0, 0, 0);
+			animator.SetBool("Landed", true);
+			canRotate = true;
+			touchingPlatform = true;
+			isJumping = false;
+			Debug.Log("Went through"); //temp fix for collision, needs to be redone or fine tuned
+		}
+		//	else
+		//		rigidbody.AddForce(new Vector3(0, -0.9f, 0), ForceMode.VelocityChange);
+
+
 		UpdateGameMode2();
 		UpdateJumping();
-		
+		HandleZoom();
 		
 		if (Input.GetKey(KeyCode.Escape))
 		{
@@ -56,6 +78,7 @@ public class UmeController : MonoBehaviour
 		
 		
 	}
+
 	
 	void UpdateGameMode2()
 	{
@@ -84,7 +107,7 @@ public class UmeController : MonoBehaviour
 
 	void UpdateJumping ()
 	{
-		HandleZoom();
+
 		if (Input.GetButtonDown("Jump") || Input.GetMouseButtonDown(0))
 		{
 			if (touchingPlatform)
@@ -119,9 +142,9 @@ public class UmeController : MonoBehaviour
 					}
 					canRotate = false;
 				}
-				rigidbody.AddForce(landVelocity, ForceMode.VelocityChange);
+				rigidbody.AddForce(landVelocity, ForceMode.Impulse);
 				goingDown = true;
-				isJumping = false;
+
 				
 				if(gameMode2 && Physics.gravity.y < 0f)
 					ParticleCreationJump();
@@ -228,7 +251,9 @@ public class UmeController : MonoBehaviour
 	{
 		canRotate = true;
 		touchingPlatform = true;
+		isJumping = false;
 		animator.SetBool("Landed", true);
+
 		ParticleCreationRun();
 		//	if (other.collider.tag == "Smelly")
 		
@@ -246,7 +271,8 @@ public class UmeController : MonoBehaviour
 			splashFix += Time.deltaTime;
 
 
-		touchingPlatform = true;
+		//touchingPlatform = true;
+
 		animator.SetBool("Landed", false);
 		
 	}
@@ -256,6 +282,14 @@ public class UmeController : MonoBehaviour
 		touchingPlatform = false;
 
 		animator.SetBool("Landed", false);
+	}
+	void OnTriggerEnter(Collider other)
+	{
+		if (other.tag == "BasicObstacle")
+		{
+			rigidbody.velocity = new Vector3(0,0,0);
+			animator.SetTrigger("Dead");
+		}
 	}
 	
 	private void GameStart()
