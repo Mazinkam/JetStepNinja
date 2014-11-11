@@ -18,7 +18,7 @@ RenderSettings:
   m_FogDensity: .00109999999
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientLight: {r: .29411763, g: .29411763, b: .29411763, a: 1}
+  m_AmbientLight: {r: .352941155, g: .228373691, b: .228373691, a: 1}
   m_SkyboxMaterial: {fileID: 0}
   m_HaloStrength: .5
   m_FlareStrength: 1
@@ -1483,7 +1483,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 294350294}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 46.5698662, y: 0, z: 253.231995}
+  m_LocalPosition: {x: 46.5698662, y: -.345703125, z: 253.231995}
   m_LocalScale: {x: 200, y: 0, z: 100}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2392,7 +2392,7 @@ MonoBehaviour:
   obj:
   - {fileID: 100004, guid: 276ea1e7ecb90df4cb1885cced1b7deb, type: 2}
   spawnMin: .200000003
-  spawnMax: 1
+  spawnMax: .5
 --- !u!4 &511066825
 Transform:
   m_ObjectHideFlags: 0
@@ -2416,7 +2416,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc566d171b078634ea82dc9fff7d437d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rate: .200000003
+  rate: 1
   maxMove: 120
   minMove: 0
 --- !u!1 &511489227
@@ -5839,7 +5839,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 847146ac3929cc1439069db786bb8a81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  speed: 1
 --- !u!1 &830120462
 GameObject:
   m_ObjectHideFlags: 0
@@ -6205,7 +6205,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 02866b21686f0764eb2f2ecb98e5935a, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 258.623505
+      value: 247.854706
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 02866b21686f0764eb2f2ecb98e5935a, type: 2}
       propertyPath: m_LocalRotation.x
@@ -6229,7 +6229,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 02866b21686f0764eb2f2ecb98e5935a, type: 2}
       propertyPath: m_LocalScale.x
-      value: 10000
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 02866b21686f0764eb2f2ecb98e5935a, type: 2}
       propertyPath: m_LocalScale.y
@@ -10664,7 +10664,7 @@ Renderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1659438353}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_LightmapIndex: 255
@@ -10686,7 +10686,7 @@ MeshCollider:
   m_GameObject: {fileID: 1659438353}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
   m_Convex: 0
@@ -10705,7 +10705,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1659438353}
   m_LocalRotation: {x: .00349484314, y: -.707098067, z: .707098246, w: -.00349484128}
-  m_LocalPosition: {x: 119.978737, y: 102.67334, z: 961.868835}
+  m_LocalPosition: {x: 119.978737, y: 102.673317, z: 885.563965}
   m_LocalScale: {x: 200, y: 1, z: 120}
   m_Children: []
   m_Father: {fileID: 0}
@@ -11629,10 +11629,10 @@ Light:
   m_GameObject: {fileID: 1785725108}
   m_Enabled: 1
   serializedVersion: 3
-  m_Type: 1
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: .5
-  m_Range: 10
+  m_Type: 0
+  m_Color: {r: .658147931, g: .544442058, b: .698529422, a: 1}
+  m_Intensity: 2.07999992
+  m_Range: 10000
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
@@ -11662,8 +11662,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1785725108}
-  m_LocalRotation: {x: -.647779047, y: 0, z: 0, w: -.761828363}
-  m_LocalPosition: {x: 439.93045, y: 481.525177, z: 224.473938}
+  m_LocalRotation: {x: .317298919, y: 0, z: 0, w: .948325574}
+  m_LocalPosition: {x: 253.576416, y: 3030.39893, z: -3993.90747}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children: []
   m_Father: {fileID: 0}
@@ -11958,6 +11958,7 @@ GameObject:
   - 124: {fileID: 1863557968}
   - 81: {fileID: 1863557967}
   - 45: {fileID: 1863557966}
+  - 82: {fileID: 1863557972}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -11971,8 +11972,8 @@ Skybox:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1863557965}
-  m_Enabled: 0
-  m_CustomSkybox: {fileID: 2100000, guid: 9ba05f538ee36044da5cd2a4f14a8b18, type: 2}
+  m_Enabled: 1
+  m_CustomSkybox: {fileID: 2100000, guid: 3d6e11b160f61064fa25bf649d4507d9, type: 2}
 --- !u!81 &1863557967
 AudioListener:
   m_ObjectHideFlags: 0
@@ -12042,6 +12043,64 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
+--- !u!82 &1863557972
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1863557965}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: c87db6a207e8233438bb465f3d4b0c75, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &1868912464
 GameObject:
   m_ObjectHideFlags: 0
@@ -12759,8 +12818,8 @@ Transform:
   m_PrefabInternal: {fileID: 880218154}
   m_GameObject: {fileID: 2032344551}
   m_LocalRotation: {x: 0, y: .707106829, z: 0, w: .707106829}
-  m_LocalPosition: {x: -495.296753, y: 0, z: 258.623505}
-  m_LocalScale: {x: 10000, y: 1000, z: 1}
+  m_LocalPosition: {x: -495.296753, y: 0, z: 247.854706}
+  m_LocalScale: {x: 1000, y: 1000, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 10

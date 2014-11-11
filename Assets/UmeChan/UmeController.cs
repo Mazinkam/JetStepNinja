@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+
+//remove rigidbody and change movement with lerps 
 public class UmeController : MonoBehaviour
 {
 	public Vector3 jumpVelocity, landVelocity;
@@ -101,7 +103,7 @@ public class UmeController : MonoBehaviour
 			camera.fieldOfView = Mathf.Lerp(camera.fieldOfView,50,Time.deltaTime*3);
 		}
 		else{
-			camera.fieldOfView = Mathf.Lerp(camera.fieldOfView,30,Time.deltaTime*3);
+			camera.fieldOfView = Mathf.Lerp(camera.fieldOfView,30,Time.deltaTime/2);
 		}
 	}
 
