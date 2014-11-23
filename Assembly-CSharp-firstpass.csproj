@@ -19,7 +19,7 @@
 	<DebugType>full</DebugType>
 	<Optimize>false</Optimize>
 	<OutputPath>Temp\bin\Debug\</OutputPath>
-	<DefineConstants>DEBUG;TRACE;UNITY_4_5_3;UNITY_4_5;UNITY_ANDROID;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_UNITYEVENTS;ENABLE_NEW_HIERARCHY ;ENABLE_AUDIO_FMOD;ENABLE_MONO;ENABLE_TERRAIN;ENABLE_SUBSTANCE;ENABLE_GENERICS;INCLUDE_WP8SUPPORT;ENABLE_WWW;ENABLE_IMAGEEFFECTS;INCLUDE_WP_BLUE_SUPPORT;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_CLOTH;UNITY_ANDROID_API;ENABLE_2D_PHYSICS;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_WIN</DefineConstants>
+	<DefineConstants>DEBUG;TRACE;UNITY_4_6_0;UNITY_4_6;UNITY_ANDROID;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_UNITYEVENTS;ENABLE_NEW_HIERARCHY ;ENABLE_AUDIO_FMOD;ENABLE_MONO;ENABLE_TERRAIN;ENABLE_SUBSTANCE;ENABLE_GENERICS;INCLUDE_WP8SUPPORT;ENABLE_WWW;ENABLE_IMAGEEFFECTS;ENABLE_4_6_FEATURES;INCLUDE_WP_BLUE_SUPPORT;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_CLOTH;UNITY_ANDROID_API;ENABLE_2D_PHYSICS;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;DEVELOPMENT_BUILD;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_OSX;UNITY_TEAM_LICENSE;UNITY_PRO_LICENSE</DefineConstants>
 	<ErrorReport>prompt</ErrorReport>
 	<WarningLevel>4</WarningLevel>
 	<NoWarn>0169</NoWarn>
@@ -39,17 +39,89 @@
 	<Reference Include="System.Core" />
 	<Reference Include="System.Xml.Linq" />
 	<Reference Include="UnityEngine">
-	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	  <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEngine.dll</HintPath>
 	</Reference>
 	<Reference Include="UnityEditor">
-	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	  <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEditor.dll</HintPath>
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Plugins\Detonator Explosion Framework\Sample Supporting Emitters\DetonatorSprayHelper.cs" />
+     <Compile Include="Assets\Plugins\Detonator Explosion Framework\System\Detonator.cs" />
+     <Compile Include="Assets\Plugins\Detonator Explosion Framework\System\DetonatorBurstEmitter.cs" />
+     <Compile Include="Assets\Plugins\Detonator Explosion Framework\System\DetonatorCloudRing.cs" />
+     <Compile Include="Assets\Plugins\Detonator Explosion Framework\System\DetonatorComponent.cs" />
+     <Compile Include="Assets\Plugins\Detonator Explosion Framework\System\DetonatorFireball.cs" />
+     <Compile Include="Assets\Plugins\Detonator Explosion Framework\System\DetonatorForce.cs" />
+     <Compile Include="Assets\Plugins\Detonator Explosion Framework\System\DetonatorGlow.cs" />
+     <Compile Include="Assets\Plugins\Detonator Explosion Framework\System\DetonatorHeatwave.cs" />
+     <Compile Include="Assets\Plugins\Detonator Explosion Framework\System\DetonatorLight.cs" />
+     <Compile Include="Assets\Plugins\Detonator Explosion Framework\System\DetonatorShockwave.cs" />
+     <Compile Include="Assets\Plugins\Detonator Explosion Framework\System\DetonatorSmoke.cs" />
+     <Compile Include="Assets\Plugins\Detonator Explosion Framework\System\DetonatorSound.cs" />
+     <Compile Include="Assets\Plugins\Detonator Explosion Framework\System\DetonatorSparks.cs" />
+     <Compile Include="Assets\Plugins\Detonator Explosion Framework\System\DetonatorSpray.cs" />
+     <Compile Include="Assets\Plugins\Detonator Explosion Framework\TestScene\DetonatorTest.cs" />
+     <Compile Include="Assets\Plugins\Detonator Explosion Framework\TestScene\TouchToMouse.cs" />
+     <Compile Include="Assets\Plugins\DrawCallMini\Scripts\Editor\AssetExporter.cs" />
+     <Compile Include="Assets\Plugins\DrawCallMini\Scripts\Editor\CombineMeshInEditor.cs" />
+     <Compile Include="Assets\Plugins\DrawCallMini\Scripts\Editor\CombineMeshInEditorWindow.cs" />
+     <Compile Include="Assets\Plugins\DrawCallMini\Scripts\Editor\MeshExporter.cs" />
+     <Compile Include="Assets\Plugins\DrawCallMini\Scripts\Editor\RevertFromDevelopmentBake.cs" />
+     <Compile Include="Assets\Plugins\DrawCallMini\Scripts\Editor\TextureExporter.cs" />
+     <Compile Include="Assets\Plugins\DrawCallMini\Scripts\Misc\ShaderProperties.cs" />
+     <Compile Include="Assets\Plugins\DrawCallMini\Scripts\Misc\TextureAtlasInfo.cs" />
+     <Compile Include="Assets\Plugins\DrawCallMini\Scripts\Runtime\MeshCombineUtility.cs" />
+     <Compile Include="Assets\Plugins\DrawCallMini\Scripts\Runtime\OptimizedCombineChildren.cs" />
+     <Compile Include="Assets\Plugins\DrawCallMini\Scripts\Runtime\TextureCombineUtility.cs" />
+     <Compile Include="Assets\Plugins\GoKitLite\GoKitLite.cs" />
+     <Compile Include="Assets\Plugins\GoKitLite\GoKitLiteEasing.cs" />
+     <Compile Include="Assets\Plugins\GoKitLite\GoKitLitePropertyTweens.cs" />
+     <Compile Include="Assets\Plugins\GoKitLite\GoKitLiteTweenFlow.cs" />
+     <Compile Include="Assets\Plugins\GoKitLite\demo\scripts\CustomPropertiesUI.cs" />
+     <Compile Include="Assets\Plugins\GoKitLite\demo\scripts\FPSHUD.cs" />
+     <Compile Include="Assets\Plugins\GoKitLite\demo\scripts\GoKitLiteActions.cs" />
+     <Compile Include="Assets\Plugins\GoKitLite\demo\scripts\SimpleTweenUI.cs" />
+     <Compile Include="Assets\Plugins\GoKitLite\demo\scripts\StressTestGUI.cs" />
+     <Compile Include="Assets\Plugins\GoKitLite\demo\scripts\TweenChainingUI.cs" />
+     <Compile Include="Assets\Plugins\GoKitLite\demo\scripts\TweenFlowUI.cs" />
      <Compile Include="Assets\Plugins\Pixelplacement\iTween\Sample\MoveSample.cs" />
      <Compile Include="Assets\Plugins\Pixelplacement\iTween\Sample\RotateSample.cs" />
      <Compile Include="Assets\Plugins\Pixelplacement\iTween\Sample\SampleInfo.cs" />
      <Compile Include="Assets\Plugins\Pixelplacement\iTween\iTween.cs" />
+     <Compile Include="Assets\Plugins\StateKit\Demo\mecanim\MecanimPlayerController.cs" />
+     <Compile Include="Assets\Plugins\StateKit\Demo\mecanim\states\RunLeftState.cs" />
+     <Compile Include="Assets\Plugins\StateKit\Demo\mecanim\states\RunRightState.cs" />
+     <Compile Include="Assets\Plugins\StateKit\Demo\mecanim\states\RunStraightState.cs" />
+     <Compile Include="Assets\Plugins\StateKit\Demo\patrol-chase\EnemyController.cs" />
+     <Compile Include="Assets\Plugins\StateKit\Demo\patrol-chase\PlayerController.cs" />
+     <Compile Include="Assets\Plugins\StateKit\Demo\patrol-chase\states\EnemyChase.cs" />
+     <Compile Include="Assets\Plugins\StateKit\Demo\patrol-chase\states\EnemyPatrol.cs" />
+     <Compile Include="Assets\Plugins\StateKit\Demo\standard\SomeClass.cs" />
+     <Compile Include="Assets\Plugins\StateKit\Demo\standard\StandardUITester.cs" />
+     <Compile Include="Assets\Plugins\StateKit\Demo\standard\states\ChasingState.cs" />
+     <Compile Include="Assets\Plugins\StateKit\Demo\standard\states\PatrollingState.cs" />
+     <Compile Include="Assets\Plugins\StateKit\SKMecanimState.cs" />
+     <Compile Include="Assets\Plugins\StateKit\SKMecanimStateMachine.cs" />
+     <Compile Include="Assets\Plugins\StateKit\SKState.cs" />
+     <Compile Include="Assets\Plugins\StateKit\SKStateMachine.cs" />
+     <Compile Include="Assets\Plugins\TransitionKit\TransitionKit.cs" />
+     <Compile Include="Assets\Plugins\TransitionKit\TransitionKitDelegate.cs" />
+     <Compile Include="Assets\Plugins\TransitionKit\demo\SceneSwitcher.cs" />
+     <Compile Include="Assets\Plugins\TransitionKit\demo\demoAssets\TwirlTransition.cs" />
+     <Compile Include="Assets\Plugins\TransitionKit\transitions\BlurTransition.cs" />
+     <Compile Include="Assets\Plugins\TransitionKit\transitions\DoorwayTransition.cs" />
+     <Compile Include="Assets\Plugins\TransitionKit\transitions\FadeTransition.cs" />
+     <Compile Include="Assets\Plugins\TransitionKit\transitions\FishEyeTransition.cs" />
+     <Compile Include="Assets\Plugins\TransitionKit\transitions\PixelateTransition.cs" />
+     <Compile Include="Assets\Plugins\TransitionKit\transitions\RippleTransition.cs" />
+     <Compile Include="Assets\Plugins\TransitionKit\transitions\SquaresTransition.cs" />
+     <Compile Include="Assets\Plugins\TransitionKit\transitions\TriangleSlicesTransition.cs" />
+     <Compile Include="Assets\Plugins\TransitionKit\transitions\VerticalSlicesTransition.cs" />
+     <Compile Include="Assets\Plugins\TransitionKit\transitions\WindTransition.cs" />
+     <Compile Include="Assets\Plugins\TrashMan\TrashMan.cs" />
+     <Compile Include="Assets\Plugins\TrashMan\TrashManRecycleBin.cs" />
+     <Compile Include="Assets\Plugins\TrashMan\demo\DemoUI.cs" />
      <Compile Include="Assets\Standard Assets\Water (Basic)\Sources\Scripts\WaterSimple.cs" />
      <Compile Include="Assets\Standard Assets\Water (Pro Only)\Sources\Scripts\Water.cs" />
      <Compile Include="Assets\Standard Assets\Water (Pro Only)\Water4\Sources\Scripts\Displace.cs" />
@@ -59,16 +131,31 @@
      <Compile Include="Assets\Standard Assets\Water (Pro Only)\Water4\Sources\Scripts\SpecularLighting.cs" />
      <Compile Include="Assets\Standard Assets\Water (Pro Only)\Water4\Sources\Scripts\WaterBase.cs" />
      <Compile Include="Assets\Standard Assets\Water (Pro Only)\Water4\Sources\Scripts\WaterTile.cs" />
+     <None Include="Assets\Plugins\TransitionKit\transitions\shaders\TextureWithAlpha.shader" />
+     <None Include="Assets\Plugins\TransitionKit\transitions\shaders\Pixelate.shader" />
      <None Include="Assets\Server\crossdomain.xml" />
      <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
+     <None Include="Assets\Plugins\TransitionKit\demo\demoAssets\TwirlEffect.shader" />
+     <None Include="Assets\Plugins\TransitionKit\transitions\shaders\Fader.shader" />
      <None Include="Assets\Standard Assets\Water (Pro Only)\Water4\Sources\Shaders\FX-SimpleWater4.shader" />
      <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
-     <None Include="Assets\FreeEffect\Document\FreeEffect.txt" />
+     <None Include="Assets\Plugins\TransitionKit\transitions\shaders\Wind.shader" />
+     <None Include="Assets\Plugins\TransitionKit\transitions\shaders\CurvedWind.shader" />
+     <None Include="Assets\Plugins\TransitionKit\transitions\shaders\Blur.shader" />
+     <None Include="Assets\Plugins\TransitionKit\transitions\shaders\FishEye.shader" />
      <None Include="Assets\Standard Assets\Water (Basic)\Sources\Shaders\FX-Water Simple.shader" />
+     <None Include="Assets\Plugins\DrawCallMini\Example\ReadMe.txt" />
+     <None Include="Assets\Plugins\TransitionKit\transitions\shaders\Doorway.shader" />
      <None Include="Assets\Plugins\Pixelplacement\iTween\ReadMe!\ReadMe!.txt" />
      <None Include="Assets\Standard Assets\Water (Pro Only)\Sources\Shaders\FX-Water.shader" />
+     <None Include="Assets\Plugins\Detonator Explosion Framework\Resources\Detonator\Textures\HeatDistort.shader" />
+     <None Include="Assets\Plugins\TransitionKit\transitions\shaders\Ripple.shader" />
      <None Include="Assets\Standard Assets\Water (Pro Only)\Water4\Sources\Shaders\WaterInclude.cginc" />
      <None Include="Assets\Standard Assets\Water (Pro Only)\Water4\Sources\Shaders\FX-Water4.shader" />
+     <None Include="Assets\Plugins\TransitionKit\transitions\shaders\Squares.shader" />
+ <Reference Include="UnityEngine.UI">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/4.6.0/UnityEngine.UI.dll</HintPath>
+ </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -16,6 +16,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/DemoLevel.unity
   - enabled: 0
+    path: Assets/Plugins/TransitionKit/demo/Scene1.unity
+  - enabled: 0
+    path: Assets/Plugins/TransitionKit/demo/Scene2.unity
+  - enabled: 0
     path: Assets/Test Scene/Test Scene.unity
   - enabled: 0
     path: Assets/Test Scene/Loading Scene.unity

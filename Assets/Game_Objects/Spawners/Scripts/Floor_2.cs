@@ -23,12 +23,13 @@ public class Floor_2 : MonoBehaviour {
 	
 	void Spawn()
 	{
-		if(countFloor_2 <= limitFloor_2)
-		{
-			countFloor_2++;
-			Instantiate(obj[Random.Range(0, obj.Length)], transform.position, Quaternion.identity);
-			//Debug.Log("countFloor_2: " + countFloor_2);
+
+
+			var newObj = TrashMan.spawn( obj[Random.Range(0, obj.Length)], transform.position, Quaternion.Euler(0,90,0));
+			TrashMan.despawnAfterDelay( newObj, 3 );
+
+
 			Invoke("Spawn", Random.Range(spawnMin, spawnMax));
-		}
+
 	}
 }

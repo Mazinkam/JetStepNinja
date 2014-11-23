@@ -1,8 +1,11 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="..\..\NewTestAssets\Assets\RuinRun\RuinRunStarterKit\Scripts\csTempleRun.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/UmeChan/UmeController.cs">
     <Files>
-      <File FileName="..\..\NewTestAssets\Assets\RuinRun\RuinRunStarterKit\Scripts\csTempleRun.cs" Line="312" Column="1" />
+      <File FileName="Assets/UmeChan/UmeController.cs" Line="41" Column="47" />
+      <File FileName="Assets/Game_Objects/Obstacles/Scripts/BasicObstacleMovement.cs" Line="1" Column="1" />
+      <File FileName="Assets/Game_Objects/Spawners/Scripts/Floor_3.cs" Line="1" Column="1" />
+      <File FileName="Assets/UmeChan/CameraScripts.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

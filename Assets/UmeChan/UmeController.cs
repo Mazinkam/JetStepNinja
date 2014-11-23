@@ -5,257 +5,317 @@ using System.Collections;
 //remove rigidbody and change movement with lerps 
 public class UmeController : MonoBehaviour
 {
-	public Vector3 jumpVelocity, landVelocity;
-	public GameObject waterRun, waterJump, airJump, airJumpUpside;
-	public float runnerSpeed;
+
+	enum GameMode
+	{
+		Normal,
+		DoubleWall
+	};
+
+	enum PlayerPositionState
+	{
+		None,
+		GoingUp,
+		GoingDown,
+		ReverseGoingUp,
+		ReverseGoingDown
+	};
+
+	enum PlayerLocation
+	{
+		OnBottomFloor,
+		OnTopFloor,
+		InAir
+
+	};
+
 	public static Transform UmeTransform;
-	public Camera camera;
+
+	public Vector3 JumpVelocity, LandVelocity, JumpVelocityReverse, LandVelocityReverse;
+	public GameObject WaterRun, WaterJump, AirJump, AirJumpUpside, JetStep;
+
+	private Animator _animator;
+
+	private float _particleFix = 0;
 	
-	private bool touchingPlatform, goingDown;
-	private Animator animator;
-	private float speed;
-	private float particleFix = 0;
+	private GameMode _gMode = GameMode.DoubleWall;
+	private PlayerPositionState _pPositionState = PlayerPositionState.GoingDown;
+	private PlayerLocation _pLocation = PlayerLocation.InAir;
 
-	private float splashFix;
-	private bool isJumping;
+	private GameObject _currentFloor, _bottomFloor, _topFloor;
 
 
-	//Game mode 2
-	private bool canRotate = false;
-	private bool reversePhysics = false;
-	private bool gameMode2 = false;
-	private Transform floor, roof;
-
+	
 	void Start()
 	{
-		rigidbody.isKinematic = false;
-		enabled = true;
-		
-		animator = GetComponent<Animator>();
-		animator.speed = 2f;
-		
-		//	floor = GameObject.Find("BottomFloorSpawner").transform;
-		
-		if(GameObject.FindGameObjectWithTag("GameMode2") != null)
-		{
-			gameMode2 = true;
-			roof = GameObject.Find("TopFloorSpawner").transform;
-		}
+		_animator = GetComponent<Animator>();
+		_animator.speed = 2f;
+
+		if(_bottomFloor == null)
+			_bottomFloor = GameObject.FindWithTag("BottomFloorTile");
+
+		if(_topFloor == null)
+			_topFloor = GameObject.FindWithTag("TopFloorTile");
+
+		_currentFloor = _bottomFloor;
+
 	}
 	
 	void Update()
 	{
 
-		if(transform.position.y >= 120)
-			rigidbody.velocity = new Vector3(0, -10, 0);
-		
-		//simulating own gravity :D
-		if(transform.position.y <= -10){
-			rigidbody.velocity = new Vector3(0, 0, 0); //preventing the player to go trough the floor if the colliders fail us
-			transform.position = new Vector3(0, 0, 0);
-			animator.SetBool("Landed", true);
-			canRotate = true;
-			touchingPlatform = true;
-			isJumping = false;
-			Debug.Log("Went through"); //temp fix for collision, needs to be redone or fine tuned
-		}
-		//	else
-		//		rigidbody.AddForce(new Vector3(0, -0.9f, 0), ForceMode.VelocityChange);
+		HandlePlayerInput ();
 
-
-		UpdateGameMode2();
-		UpdateJumping();
-		HandleZoom();
 		
 		if (Input.GetKey(KeyCode.Escape))
 		{
 			Application.Quit();
 		}
 		
-		
-		speed = Mathf.Clamp(runnerSpeed + Time.deltaTime, -1f, 1f);
-		animator.SetFloat("Speed", speed);
+
+		_animator.SetFloat("Speed", Mathf.Clamp(Time.deltaTime, -1f, 1f));
 		
 		UpdateMoveParticles();
-		
+
+		Debug.Log ("_pLocation " + _pLocation + " _pPositionState " + _pPositionState);
 		
 	}
 
-	
-	void UpdateGameMode2()
+	void PhysicsCollisionFix()
 	{
-		if(gameMode2)
+		/*
+		if (_gMode == GameMode.Normal)
 		{
-			if(roof.position.y < transform.position.y)
+			if (UmeTransform.position.y <= _currentFloor.transform.position.y ) //error margin of 1
 			{
-				transform.position = new Vector3(transform.position.x, roof.position.y + 0.2f, transform.position.z);
-			}
-			else if(floor.position.y > transform.position.y)
-			{
-				transform.position = new Vector3(transform.position.x, floor.position.y - 0.2f, transform.position.z);
+				_pLocation = PlayerLocation.OnBottomFloor;
 			}
 		}
-	}
-
-	void HandleZoom()
-	{
-		if(isJumping){
-			camera.fieldOfView = Mathf.Lerp(camera.fieldOfView,50,Time.deltaTime*3);
+	
+		if (_gMode == GameMode.DoubleWall )
+		{
+			if(_pPositionState == PlayerPositionState.GoingUp || _pPositionState == PlayerPositionState.GoingDown )
+			{
+				if(UmeTransform.position.y <= _currentFloor.transform.position.y)
+				{
+					_pLocation = PlayerLocation.OnBottomFloor;
+				}
+				
+			}
+			else if(_pPositionState == PlayerPositionState.ReverseGoingDown || _pPositionState == PlayerPositionState.ReverseGoingUp)
+			{
+				if(UmeTransform.position.y <= _currentFloor.transform.position.y)
+				{
+					_pLocation = PlayerLocation.OnTopFloor;
+				}
+			}
 		}
-		else{
-			camera.fieldOfView = Mathf.Lerp(camera.fieldOfView,30,Time.deltaTime/2);
-		}
-	}
+	*/
 
-	void UpdateJumping ()
+	}
+	
+	void HandlePlayerInput()
 	{
 
 		if (Input.GetButtonDown("Jump") || Input.GetMouseButtonDown(0))
 		{
-			if (touchingPlatform)
+			if(_gMode == GameMode.Normal)
 			{
-				rigidbody.AddForce(jumpVelocity, ForceMode.Impulse);
-				//rigidbody.velocity = jumpVelocity;
-				animator.SetTrigger("Jump");
-				goingDown = false;
-				touchingPlatform = false;
-				isJumping = true;
-			}
-			else if (!touchingPlatform)
-			{
-				// rotate player if game mode 2
-				if(gameMode2 && canRotate)
+				if (_pLocation == PlayerLocation.OnBottomFloor )
 				{
-					if(Physics.gravity.y < 0f)
-					{
-						animator.SetBool("UpsideRun",true);
-						reversePhysics = true;
-						Physics.gravity *= -1;
-						jumpVelocity *= -1;
-						landVelocity *= -1;
-					}
-					else
-					{
-						animator.SetBool("UpsideRun",false);
-						reversePhysics = false;
-						Physics.gravity *= -1;
-						jumpVelocity *= -1;
-						landVelocity *= -1;
-					}
-					canRotate = false;
+					_pPositionState = PlayerPositionState.GoingUp;
+					//_pLocation = 
 				}
-				rigidbody.AddForce(landVelocity, ForceMode.Impulse);
-				goingDown = true;
+				else if (_pLocation == PlayerLocation.InAir )
+				{
+					_pPositionState = PlayerPositionState.GoingDown;
+					ParticleJetStep ();
 
-				
-				if(gameMode2 && Physics.gravity.y < 0f)
-					ParticleCreationJump();
-				else
-					ParticleCreationJump();
+				}
+			}
+			if(_gMode == GameMode.DoubleWall)
+			{
+				if (_pLocation == PlayerLocation.OnBottomFloor )
+				{
+					_pPositionState = PlayerPositionState.GoingUp;
+				}
+				else if (_pLocation == PlayerLocation.InAir && _pPositionState == PlayerPositionState.GoingUp)
+				{
+					_pPositionState = PlayerPositionState.ReverseGoingDown;
+					ParticleJetStep ();
+				}
+				else if (_pLocation == PlayerLocation.OnTopFloor )
+				{
+					_pPositionState = PlayerPositionState.ReverseGoingUp;
+				}
+				else if (_pLocation == PlayerLocation.InAir   && _pPositionState == PlayerPositionState.ReverseGoingUp )
+				{
+					_pPositionState = PlayerPositionState.GoingDown;
+					ParticleJetStep ();
+				}
 			}
 		}
+	}
+
+	void UpdateJumpingGameMode1 ()
+	{
+		
+		if (_pPositionState == PlayerPositionState.GoingUp && _pLocation == PlayerLocation.OnBottomFloor )
+		{
+				rigidbody.AddForce(JumpVelocity, ForceMode.Impulse);
+				_animator.SetTrigger("Jump");		
+		}
+		else if (_pPositionState == PlayerPositionState.GoingDown && _pLocation == PlayerLocation.InAir)
+		{
+			rigidbody.AddForce(LandVelocity, ForceMode.Impulse);
+
+		}
+		
+	}
+		
+	void UpdateJumpingGameMode2 ()
+	{
+		if (_pPositionState == PlayerPositionState.GoingUp && _pLocation == PlayerLocation.OnBottomFloor) 
+		{
+			rigidbody.AddForce (JumpVelocity, ForceMode.Impulse);
+			_animator.SetTrigger ("Jump");
+		}
+		else if (_pPositionState == PlayerPositionState.GoingDown && _pLocation == PlayerLocation.InAir) 
+		{
+			rigidbody.AddForce (LandVelocity, ForceMode.Impulse);
+			
+		} 
+		else if (_pPositionState == PlayerPositionState.ReverseGoingUp && _pLocation == PlayerLocation.OnTopFloor) 
+		{
+			rigidbody.AddForce (JumpVelocityReverse, ForceMode.Impulse);
+			_animator.SetTrigger ("Jump");
+		}
+		else if (_pPositionState == PlayerPositionState.ReverseGoingDown && _pLocation == PlayerLocation.InAir) 
+		{
+			rigidbody.AddForce (LandVelocityReverse, ForceMode.Impulse);
+		}
+		
 	}
 	
 	void UpdateMoveParticles ()
 	{
-		if (touchingPlatform && particleFix >= 0.2)
+		if (_pLocation == PlayerLocation.OnBottomFloor && _particleFix >= 0.2)
 		{
 			ParticleCreationRun();
-			particleFix = 0;
+			_particleFix = 0;
 		}
 		else
-			particleFix += Time.deltaTime;
+			_particleFix += Time.deltaTime;
 	}
 	
 	void FixedUpdate()
 	{
-		if (touchingPlatform)
+
+		UmeTransform = transform;
+		PhysicsCollisionFix ();
+		UpdateAnimatorSpeed ();
+
+		if(_gMode == GameMode.Normal)
+			UpdateJumpingGameMode1();
+
+		if(_gMode == GameMode.DoubleWall)
+			UpdateJumpingGameMode2();
+
+			UpdateCustomGravity ();
+
+		
+	}
+
+	void UpdateAnimatorSpeed()
+	{
+		if (_pLocation == PlayerLocation.OnBottomFloor)
 		{
-			animator.speed = 2f;
+			_animator.speed = 2f;
 		}
 		else
 		{
-			if (!goingDown)
-				animator.speed = 0.10f;
+			if (_pPositionState == PlayerPositionState.GoingUp)
+				_animator.speed = 0.10f;
 			else
-				animator.speed = 2f;
+				_animator.speed = 2f;
 		}
-		
-		UmeTransform = transform;
-		
+
+	}
+
+	void UpdateCustomGravity()
+	{
+		if (_gMode == GameMode.Normal) 
+		{
+			if (_pLocation == PlayerLocation.InAir && _pPositionState == PlayerPositionState.GoingUp)
+			{
+					rigidbody.AddForce (new Vector3 (0, -3f, 0), ForceMode.VelocityChange);
+			}
+		}
+
+
+		if (_gMode == GameMode.DoubleWall )
+		{
+			if(_pLocation == PlayerLocation.InAir || _pLocation == PlayerLocation.OnBottomFloor)
+			{
+				rigidbody.AddForce (new Vector3 (0, -3f, 0), ForceMode.VelocityChange);
+				
+			}
+			if(_pLocation == PlayerLocation.OnTopFloor )
+			{
+				rigidbody.AddForce (new Vector3 (0, 6f, 0), ForceMode.VelocityChange);
+			}
+		}
 	}
 	
 	public void ParticleCreationRun ()
 	{
 		//Set the lifetime of the particle system.
-		float lifetime = 0.93f  + Mathf.Abs(speed)  * 0.07f;
-		
 		GameObject tempParticleSystem;
-		
-		if(touchingPlatform)
-			tempParticleSystem = waterRun;
-		else
-			tempParticleSystem = waterJump;
-		
+
+		tempParticleSystem = WaterJump;
 
 		//Set the correct position of the particle system.
 		Vector3 position;
-		if(gameMode2 && Physics.gravity.y > 0)
-			position = new Vector3(UmeTransform.position.x+3, UmeTransform.position.y-0.5f, UmeTransform.position.z+2);
-		else
-			position = new Vector3(UmeTransform.position.x-3, UmeTransform.position.y-0.5f, UmeTransform.position.z+2);
+		position = new Vector3(UmeTransform.position.x-3, UmeTransform.position.y-0.5f, UmeTransform.position.z+2);
 
 		
 		GameObject tempSplashObj;
 		//Create the splash and tell it to destroy itself.
-		if(gameMode2 && !reversePhysics)
-			tempSplashObj = Instantiate(tempParticleSystem, position, Quaternion.identity) as GameObject;
-		else
-			tempSplashObj = Instantiate(tempParticleSystem, position, Quaternion.identity) as GameObject;
+		tempSplashObj = Instantiate(tempParticleSystem, position, Quaternion.identity) as GameObject;
 		
 
 		Destroy(tempSplashObj, tempSplashObj.particleSystem.startLifetime);
 		
+	}
+
+	public void ParticleJetStep ()
+	{
+		var newObj = TrashMan.spawn( JetStep, transform.position, Quaternion.identity );
+		TrashMan.despawnAfterDelay( newObj, 3 );
 	}
 	
-	public void ParticleCreationJump ()
-	{
-		//Set the lifetime of the particle system.
-		float lifetime = 0.93f  + Mathf.Abs(speed) * 0.07f;
-		
-		GameObject tempParticleSystem;
-		
-		if(gameMode2 && !reversePhysics)
-			tempParticleSystem = airJumpUpside;
-		else
-			tempParticleSystem = airJump;;
-		
-		//Set the correct position of the particle system.
-		Vector3 position;
-		if(gameMode2 && Physics.gravity.y > 0)
-			position = new Vector3(UmeTransform.position.x+3, UmeTransform.position.y-0.5f, UmeTransform.position.z+2);
-		else
-			position = new Vector3(UmeTransform.position.x-3, UmeTransform.position.y-0.5f, UmeTransform.position.z+2);
 
-		
-		GameObject tempSplashObj;
-		//Create the splash and tell it to destroy itself.
-		if(gameMode2 && !reversePhysics)
-			tempSplashObj = Instantiate(tempParticleSystem, position, Quaternion.identity) as GameObject;
-		else
-			tempSplashObj = Instantiate(tempParticleSystem, position, Quaternion.identity) as GameObject;
-
-		Destroy(tempSplashObj, tempSplashObj.particleSystem.startLifetime);
-		
-	}
 	
 	void OnCollisionEnter(Collision other)
 	{
-		canRotate = true;
-		touchingPlatform = true;
-		isJumping = false;
-		animator.SetBool("Landed", true);
+		//if(_pLocation == PlayerLocation.OnBottomFloor)
+	//		_pPositionState = PlayerPositionState.None;
 
+		_animator.SetBool("Landed", true);
+
+		if (other.gameObject.tag == "BottomFloorTile")
+		{
+			_currentFloor = _bottomFloor;
+			_pLocation = PlayerLocation.OnBottomFloor;
+			_pPositionState = PlayerPositionState.None;
+		}
+		else if(other.gameObject.tag == "TopFloorTile")
+		{
+			_currentFloor = _topFloor;;
+			_pLocation = PlayerLocation.OnTopFloor;
+			_pPositionState = PlayerPositionState.None;
+		}
+		
 		ParticleCreationRun();
 		//	if (other.collider.tag == "Smelly")
 		
@@ -263,50 +323,22 @@ public class UmeController : MonoBehaviour
 	
 	void OnCollisionStay()
 	{
+	//	if(_pLocation == PlayerLocation.OnBottomFloor)
+	//		_pPositionState = PlayerPositionState.None;
 
-		if (splashFix > 0.2)
-		{
-			ParticleCreationRun();
-			splashFix = 0;
-		}
-		else
-			splashFix += Time.deltaTime;
-
-
-		//touchingPlatform = true;
-
-		animator.SetBool("Landed", false);
+		_animator.SetBool("Landed", false);
 		
 	}
 	
 	void OnCollisionExit()
 	{
-		touchingPlatform = false;
-
-		animator.SetBool("Landed", false);
+		_pLocation = PlayerLocation.InAir;
+		_animator.SetBool("Landed", false);
 	}
 	void OnTriggerEnter(Collider other)
 	{
-		if (other.tag == "BasicObstacle")
-		{
-			rigidbody.velocity = new Vector3(0,0,0);
-			animator.SetTrigger("Dead");
-		}
+
+
 	}
-	
-	private void GameStart()
-	{
-		rigidbody.isKinematic = false;
-		enabled = true;
-		animator.SetFloat("Speed", 0);
-		
-	}
-	
-	private void GameOver()
-	{
-		renderer.enabled = false;
-		rigidbody.isKinematic = true;
-		enabled = false;
-		
-	}
+
 }

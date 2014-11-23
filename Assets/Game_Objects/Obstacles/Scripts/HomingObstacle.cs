@@ -8,7 +8,7 @@ public class HomingObstacle : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		target = PlayerController.UmeTransform;
+		target = UmeController.UmeTransform;
 	}
 	
 	// Update is called once per frame
