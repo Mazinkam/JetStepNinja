@@ -38,7 +38,7 @@ public class UmeController : MonoBehaviour
 
 	private float _particleFix = 0;
 	
-	private GameMode _gMode = GameMode.DoubleWall;
+	private GameMode _gMode = GameMode.Normal;
 	private PlayerPositionState _pPositionState = PlayerPositionState.GoingDown;
 	private PlayerLocation _pLocation = PlayerLocation.InAir;
 

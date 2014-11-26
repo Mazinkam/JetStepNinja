@@ -1,11 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/UmeChan/UmeController.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/CharCustomization/ShaderLearning/Scripts/Customize.cs">
     <Files>
-      <File FileName="Assets/UmeChan/UmeController.cs" Line="41" Column="47" />
-      <File FileName="Assets/Game_Objects/Obstacles/Scripts/BasicObstacleMovement.cs" Line="1" Column="1" />
-      <File FileName="Assets/Game_Objects/Spawners/Scripts/Floor_3.cs" Line="1" Column="1" />
-      <File FileName="Assets/UmeChan/CameraScripts.cs" Line="1" Column="1" />
+      <File FileName="Assets/CharCustomization/ShaderLearning/Scripts/CharacterAssets.cs" Line="7" Column="37" />
+      <File FileName="Assets/CharCustomization/ShaderLearning/Scripts/Customize.cs" Line="82" Column="32" />
+      <File FileName="Assets/CharCustomization/ShaderLearning/Scripts/PlayerCharacter.cs" Line="6" Column="66" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

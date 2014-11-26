@@ -46,6 +46,9 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\CharCustomization\ShaderLearning\Scripts\CharacterAssets.cs" />
+     <Compile Include="Assets\CharCustomization\ShaderLearning\Scripts\Customize.cs" />
+     <Compile Include="Assets\CharCustomization\ShaderLearning\Scripts\PlayerCharacter.cs" />
      <Compile Include="Assets\GameMap\Prefabs\CameraZoom.cs" />
      <Compile Include="Assets\GameMap\Scripts\Buttons\LeaderboardButtonScript.cs" />
      <Compile Include="Assets\GameMap\Scripts\Buttons\PlayButtonScript.cs" />
@@ -69,21 +72,20 @@
      <Compile Include="Assets\Game_Objects\Spawners\Scripts\Floor_3.cs" />
      <Compile Include="Assets\Game_Objects\Spawners\Scripts\PulsingMovement.cs" />
      <Compile Include="Assets\Game_Objects\Spawners\Scripts\TopFloorTileSpawner.cs" />
-     <Compile Include="Assets\Game_Objects\Tiles\Scripts\ParalaxMovement.cs" />
-     <Compile Include="Assets\Game_Objects\Tiles\Scripts\RepeatingTiles.cs" />
-     <Compile Include="Assets\Game_Objects\Tiles\Scripts\ScreenPlaneSize.cs" />
-     <Compile Include="Assets\Game_Objects\Tiles\Scripts\ScreenPlaneSizeClose.cs" />
      <Compile Include="Assets\Leaderboard\Scripts\HSController.cs" />
      <Compile Include="Assets\Leaderboard\Scripts\HighScoreController.cs" />
      <Compile Include="Assets\Leaderboard\Scripts\LeaderboardGuiScript.cs" />
-     <Compile Include="Assets\Store\Scripts\StoreGuiScript.cs" />
      <Compile Include="Assets\UmeChan\CameraScripts.cs" />
      <Compile Include="Assets\UmeChan\UmeController.cs" />
      <Compile Include="Assets\UmeChan\UmeControllercopy.cs" />
      <None Include="Assets\Plugins\TransitionKit\transitions\shaders\TextureWithAlpha.shader" />
      <None Include="Assets\Plugins\TransitionKit\transitions\shaders\Pixelate.shader" />
+     <None Include="Assets\Plugins\JMO Assets\MatCap Shaders\Shaders\MatCap_TextureAdd_Bumped.shader" />
      <None Include="Assets\Server\crossdomain.xml" />
      <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
+     <None Include="Assets\Plugins\JMO Assets\MatCap Shaders\Shaders\MatCap_TextureMult_Bumped.shader" />
+     <None Include="Assets\UmeChan\Shaders\Texture_Alpha.shader" />
+     <None Include="Assets\UmeChan\Shaders\Texture_Shader.shader" />
      <None Include="Assets\Plugins\TransitionKit\demo\demoAssets\TwirlEffect.shader" />
      <None Include="Assets\Plugins\TransitionKit\transitions\shaders\Fader.shader" />
      <None Include="Assets\Standard Assets\Water (Pro Only)\Water4\Sources\Shaders\FX-SimpleWater4.shader" />
@@ -91,17 +93,31 @@
      <None Include="Assets\Plugins\TransitionKit\transitions\shaders\Wind.shader" />
      <None Include="Assets\Plugins\TransitionKit\transitions\shaders\CurvedWind.shader" />
      <None Include="Assets\Plugins\TransitionKit\transitions\shaders\Blur.shader" />
+     <None Include="Assets\UmeChan\Shaders\Texture_Spec.shader" />
      <None Include="Assets\Plugins\TransitionKit\transitions\shaders\FishEye.shader" />
+     <None Include="Assets\Plugins\JMO Assets\MatCap Shaders\Shaders\MatCap_Lit.shader" />
+     <None Include="Assets\Plugins\JMO Assets\MatCap Shaders\Shaders\MatCap_Plain_Bumped.shader" />
+     <None Include="Assets\UmeChan\Shaders\Simple_Shader.shader" />
      <None Include="Assets\Standard Assets\Water (Basic)\Sources\Shaders\FX-Water Simple.shader" />
+     <None Include="Assets\Plugins\JMO Assets\MatCap Shaders\Shaders\MatCap_Plain_AdditiveZ.shader" />
+     <None Include="Assets\Plugins\JMO Assets\!JMO Assets Readme.txt" />
      <None Include="Assets\Plugins\DrawCallMini\Example\ReadMe.txt" />
      <None Include="Assets\Plugins\TransitionKit\transitions\shaders\Doorway.shader" />
+     <None Include="Assets\Plugins\JMO Assets\MatCap Shaders\Shaders\MatCap_Plain.shader" />
      <None Include="Assets\Plugins\Pixelplacement\iTween\ReadMe!\ReadMe!.txt" />
+     <None Include="Assets\Plugins\JMO Assets\MatCap Shaders\Shaders\MatCap_Plain_Additive.shader" />
      <None Include="Assets\Standard Assets\Water (Pro Only)\Sources\Shaders\FX-Water.shader" />
+     <None Include="Assets\Plugins\JMO Assets\MatCap Shaders\Shaders\MatCap_TextureMult.shader" />
+     <None Include="Assets\UmeChan\Shaders\Texture_Emit.shader" />
      <None Include="Assets\Plugins\Detonator Explosion Framework\Resources\Detonator\Textures\HeatDistort.shader" />
+     <None Include="Assets\Plugins\JMO Assets\MatCap Shaders\Shaders\MatCap_TextureAdd.shader" />
      <None Include="Assets\Plugins\TransitionKit\transitions\shaders\Ripple.shader" />
      <None Include="Assets\Standard Assets\Water (Pro Only)\Water4\Sources\Shaders\WaterInclude.cginc" />
      <None Include="Assets\Standard Assets\Water (Pro Only)\Water4\Sources\Shaders\FX-Water4.shader" />
      <None Include="Assets\Plugins\TransitionKit\transitions\shaders\Squares.shader" />
+     <None Include="Assets\Plugins\JMO Assets\MatCap Shaders\Textures\MaCrea\MaCrea.txt" />
+     <None Include="Assets\Plugins\JMO Assets\MatCap Shaders\Textures\BenSimonds\_Textures Readme.txt" />
+     <None Include="Assets\Plugins\JMO Assets\MatCap Shaders\_MatCap Shaders Readme.txt" />
  <Reference Include="Assembly-UnityScript-firstpass">
  <HintPath>/Users/Mazinkam/Documents/JetStepNinja/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
  </Reference>
