@@ -19,7 +19,7 @@
 	<DebugType>full</DebugType>
 	<Optimize>false</Optimize>
 	<OutputPath>Temp\bin\Debug\</OutputPath>
-	<DefineConstants>DEBUG;TRACE;UNITY_4_6_0;UNITY_4_6;UNITY_STANDALONE_OSX;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_UNITYEVENTS;ENABLE_NEW_HIERARCHY ;ENABLE_AUDIO_FMOD;UNITY_STANDALONE;ENABLE_MONO;ENABLE_TERRAIN;ENABLE_SUBSTANCE;ENABLE_GENERICS;INCLUDE_WP8SUPPORT;ENABLE_MOVIES;ENABLE_WWW;ENABLE_IMAGEEFFECTS;ENABLE_4_6_FEATURES;INCLUDE_WP_BLUE_SUPPORT;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_2D_PHYSICS;ENABLE_GAMECENTER;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_DUCK_TYPING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_OSX;UNITY_TEAM_LICENSE;UNITY_PRO_LICENSE</DefineConstants>
+	<DefineConstants>DEBUG;TRACE;UNITY_4_6_0;UNITY_4_6;UNITY_ANDROID;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_UNITYEVENTS;ENABLE_NEW_HIERARCHY ;ENABLE_AUDIO_FMOD;ENABLE_MONO;ENABLE_TERRAIN;ENABLE_SUBSTANCE;ENABLE_GENERICS;INCLUDE_WP8SUPPORT;ENABLE_WWW;ENABLE_IMAGEEFFECTS;ENABLE_4_6_FEATURES;INCLUDE_WP_BLUE_SUPPORT;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_CLOTH;UNITY_ANDROID_API;ENABLE_2D_PHYSICS;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;DEVELOPMENT_BUILD;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_OSX;UNITY_TEAM_LICENSE;UNITY_PRO_LICENSE</DefineConstants>
 	<ErrorReport>prompt</ErrorReport>
 	<WarningLevel>4</WarningLevel>
 	<NoWarn>0169</NoWarn>
@@ -46,65 +46,46 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\UnityChanDance\Standard Assets\Image Effects (Pro Only)\AntialiasingAsPostEffect.js" />
-     <Compile Include="Assets\UnityChanDance\Standard Assets\Image Effects (Pro Only)\Bloom.js" />
-     <Compile Include="Assets\UnityChanDance\Standard Assets\Image Effects (Pro Only)\DepthOfFieldScatter.js" />
-     <Compile Include="Assets\UnityChanDance\Standard Assets\Image Effects (Pro Only)\GlobalFog.js" />
-     <Compile Include="Assets\UnityChanDance\Standard Assets\Image Effects (Pro Only)\PostEffectsBase.js" />
-     <Compile Include="Assets\UnityChanDance\Standard Assets\Image Effects (Pro Only)\ScreenOverlay.js" />
-     <Compile Include="Assets\UnityChanDance\Standard Assets\Image Effects (Pro Only)\Vignetting.js" />
-     <None Include="Assets\UnityChanDance\UnityChan\CandyRockStar\Shader\Unitychan_chara_eye.shader" />
-     <None Include="Assets\UnityChanDance\UnityChan\CandyRockStar\Shader\Unitychan_chara_fuku.shader" />
-     <None Include="Assets\UnityChanDance\UnityChanStage\Effects\Shaders\Light Beam.shader" />
-     <None Include="Assets\Server\crossdomain.xml" />
-     <None Include="Assets\UnityChanDance\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_Antialiasing\NFAA.shader" />
-     <None Include="Assets\UnityChanDance\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_DepthOfField\TiltShiftHdrLensBlur.shader" />
-     <None Include="Assets\UnityChanDance\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_DepthOfField\DepthOfFieldScatter.shader" />
-     <None Include="Assets\UnityChanDance\UnityChanStage\Effects\Shaders\Emmisive Surface.shader" />
-     <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
-     <None Include="Assets\UnityChanDance\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_Antialiasing\SSAA.shader" />
-     <None Include="Assets\UnityChanDance\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_DepthOfField\DepthOfFieldDX11.shader" />
-     <None Include="Assets\UnityChanDance\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_Antialiasing\FXAAPreset3.shader" />
-     <None Include="Assets\UnityChanDance\WaitingRoom\Neon Sign.shader" />
-     <None Include="Assets\Standard Assets\Water (Pro Only)\Water4\Sources\Shaders\FX-SimpleWater4.shader" />
-     <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
-     <None Include="Assets\UnityChanDance\UnityChan\CandyRockStar\Shader\Unitychan_chara_fuku_ds.shader" />
-     <None Include="Assets\UnityChanDance\Resources\Camera-DepthTexture.shader" />
-     <None Include="Assets\UnityChanDance\UnityChan\CandyRockStar\Shader\Unitychan_chara_eye_blend.shader" />
-     <None Include="Assets\UnityChanDance\UnityChan\CandyRockStar\Shader\Unitychan_chara_hair_ds.shader" />
-     <None Include="Assets\UnityChanDance\UnityChanStage\Visualizer\Visualizer.shader" />
-     <None Include="Assets\UnityChanDance\UnityChan\CandyRockStar\Shader\Unitychan_chara_akarami_blend.shader" />
-     <None Include="Assets\UnityChanDance\UnityChanStage\Effects\Shaders\Back Screen.shader" />
-     <None Include="Assets\Standard Assets\Water (Basic)\Sources\Shaders\FX-Water Simple.shader" />
-     <None Include="Assets\UnityChanDance\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\ChromaticAberrationShader.shader" />
-     <None Include="Assets\UnityChanDance\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\GlobalFog.shader" />
-     <None Include="Assets\UnityChanDance\UnityChan\CandyRockStar\Shader\Unitychan_chara_hair.shader" />
-     <None Include="Assets\UnityChanDance\UnityChan\CandyRockStar\Shader\Unitychan_chara_eyelash_blend.shader" />
-     <None Include="Assets\UnityChanDance\UnityChanStage\Effects\Shaders\Unlit Alpha Cutout.shader" />
+     <Compile Include="Assets\Placeholders\Standard Assets\Particles\Legacy Particles\TimedObjectDestructor.js" />
+     <None Include="Assets\Plugins\TransitionKit\transitions\shaders\TextureWithAlpha.shader" />
+     <None Include="Assets\Plugins\TransitionKit\transitions\shaders\Pixelate.shader" />
+     <None Include="Assets\Plugins\JMO Assets\MatCap Shaders\Shaders\MatCap_TextureAdd_Bumped.shader" />
+     <None Include="Assets\Placeholders\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
+     <None Include="Assets\Plugins\JMO Assets\MatCap Shaders\Shaders\MatCap_TextureMult_Bumped.shader" />
+     <None Include="Assets\Shaders\Texture_Alpha.shader" />
+     <None Include="Assets\Shaders\Texture_Shader.shader" />
+     <None Include="Assets\Plugins\TransitionKit\demo\demoAssets\TwirlEffect.shader" />
+     <None Include="Assets\Plugins\TransitionKit\transitions\shaders\Fader.shader" />
+     <None Include="Assets\Placeholders\Standard Assets\Water (Pro Only)\Water4\Sources\Shaders\FX-SimpleWater4.shader" />
+     <None Include="Assets\Placeholders\Standard Assets\Skyboxes\_skybox info.txt" />
+     <None Include="Assets\Plugins\TransitionKit\transitions\shaders\Wind.shader" />
+     <None Include="Assets\Plugins\TransitionKit\transitions\shaders\CurvedWind.shader" />
+     <None Include="Assets\Plugins\TransitionKit\transitions\shaders\Blur.shader" />
+     <None Include="Assets\Shaders\Texture_Spec.shader" />
+     <None Include="Assets\Plugins\TransitionKit\transitions\shaders\FishEye.shader" />
+     <None Include="Assets\Plugins\JMO Assets\MatCap Shaders\Shaders\MatCap_Lit.shader" />
+     <None Include="Assets\Plugins\JMO Assets\MatCap Shaders\Shaders\MatCap_Plain_Bumped.shader" />
+     <None Include="Assets\Shaders\Simple_Shader.shader" />
+     <None Include="Assets\Placeholders\Standard Assets\Water (Basic)\Sources\Shaders\FX-Water Simple.shader" />
+     <None Include="Assets\Plugins\JMO Assets\MatCap Shaders\Shaders\MatCap_Plain_AdditiveZ.shader" />
+     <None Include="Assets\Plugins\JMO Assets\!JMO Assets Readme.txt" />
+     <None Include="Assets\Plugins\DrawCallMini\Example\ReadMe.txt" />
+     <None Include="Assets\Plugins\TransitionKit\transitions\shaders\Doorway.shader" />
+     <None Include="Assets\Plugins\JMO Assets\MatCap Shaders\Shaders\MatCap_Plain.shader" />
      <None Include="Assets\Plugins\Pixelplacement\iTween\ReadMe!\ReadMe!.txt" />
-     <None Include="Assets\Standard Assets\Water (Pro Only)\Sources\Shaders\FX-Water.shader" />
-     <None Include="Assets\UnityChanDance\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_Antialiasing\DLAA.shader" />
-     <None Include="Assets\UnityChanDance\UnityChanStage\Effects\Shaders\Confetti.shader" />
-     <None Include="Assets\UnityChanDance\UnityChan\CandyRockStar\Shader\Unitychan_chara_hada.shader" />
-     <None Include="Assets\UnityChanDance\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\BrightPassFilter2.shader" />
-     <None Include="Assets\UnityChanDance\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_DepthOfField\SeparableBlur.shader" />
-     <None Include="Assets\UnityChanDance\UnityChan\CandyRockStar\Shader\Unitychan_chara_hada_blend.shader" />
-     <None Include="Assets\UnityChanDance\UnityChanStage\Effects\Shaders\Tree Leaf.shader" />
-     <None Include="Assets\UnityChanDance\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\VignettingShader.shader" />
-     <None Include="Assets\UnityChanDance\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_Antialiasing\FXAA2.shader" />
-     <None Include="Assets\UnityChanDance\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\LensFlareCreate.shader" />
-     <None Include="Assets\UnityChanDance\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\BlendModesOverlay.shader" />
-     <None Include="Assets\Standard Assets\Water (Pro Only)\Water4\Sources\Shaders\WaterInclude.cginc" />
-     <None Include="Assets\Standard Assets\Water (Pro Only)\Water4\Sources\Shaders\FX-Water4.shader" />
-     <None Include="Assets\UnityChanDance\UnityChanStage\Effects\Shaders\Scrolling Ticker.shader" />
-     <None Include="Assets\UnityChanDance\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_Antialiasing\FXAA3Console.shader" />
-     <None Include="Assets\UnityChanDance\UnityChanStage\Visualizer\CopyDepth.shader" />
-     <None Include="Assets\UnityChanDance\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_Antialiasing\FXAAPreset2.shader" />
-     <None Include="Assets\UnityChanDance\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\BlurAndFlares.shader" />
-     <None Include="Assets\UnityChanDance\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\BlendForBloom.shader" />
- <Reference Include="Assembly-UnityScript-firstpass">
- <HintPath>/Users/Mazinkam/Documents/JetStepNinja/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
- </Reference>
+     <None Include="Assets\Plugins\JMO Assets\MatCap Shaders\Shaders\MatCap_Plain_Additive.shader" />
+     <None Include="Assets\Placeholders\Standard Assets\Water (Pro Only)\Sources\Shaders\FX-Water.shader" />
+     <None Include="Assets\Plugins\JMO Assets\MatCap Shaders\Shaders\MatCap_TextureMult.shader" />
+     <None Include="Assets\Shaders\Texture_Emit.shader" />
+     <None Include="Assets\Plugins\Detonator Explosion Framework\Resources\Detonator\Textures\HeatDistort.shader" />
+     <None Include="Assets\Plugins\JMO Assets\MatCap Shaders\Shaders\MatCap_TextureAdd.shader" />
+     <None Include="Assets\Plugins\TransitionKit\transitions\shaders\Ripple.shader" />
+     <None Include="Assets\Placeholders\Standard Assets\Water (Pro Only)\Water4\Sources\Shaders\WaterInclude.cginc" />
+     <None Include="Assets\Placeholders\Standard Assets\Water (Pro Only)\Water4\Sources\Shaders\FX-Water4.shader" />
+     <None Include="Assets\Plugins\TransitionKit\transitions\shaders\Squares.shader" />
+     <None Include="Assets\Plugins\JMO Assets\MatCap Shaders\Textures\MaCrea\MaCrea.txt" />
+     <None Include="Assets\Plugins\JMO Assets\MatCap Shaders\Textures\BenSimonds\_Textures Readme.txt" />
+     <None Include="Assets\Plugins\JMO Assets\MatCap Shaders\_MatCap Shaders Readme.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/4.6.0/UnityEngine.UI.dll</HintPath>
  </Reference>
